@@ -16,6 +16,48 @@ body {
   color: #0a0a0a;
 }
 
+.hero-image {
+  animation: hero-ken-burns 18s ease-out both;
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent 72%);
+}
+
+.button-sheen {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.button-sheen::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  background: linear-gradient(110deg, transparent 12%, rgba(255, 255, 255, 0.24) 32%, transparent 52%);
+  transform: translateX(-120%);
+  transition: transform 0.75s ease;
+}
+
+.button-sheen:hover::after {
+  transform: translateX(120%);
+}
+
+@keyframes hero-ken-burns {
+  from {
+    transform: scale(1.04);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
 ::selection {
   background: #99000a;
   color: white;
@@ -42,5 +84,16 @@ body {
   .mobile-menu-toggle,
   .mobile-menu-panel {
     display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

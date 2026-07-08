@@ -10,8 +10,8 @@ type ButtonProps = {
 
 export function Button({ href, children, variant = "primary", className }: ButtonProps) {
   const classes = cn(
-    "focus-ring inline-flex min-h-12 items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-semibold transition",
-    variant === "primary" && "bg-brand text-white shadow-soft hover:bg-ember",
+    "focus-ring inline-flex min-h-12 items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-semibold transition duration-300 hover:-translate-y-0.5 active:translate-y-0",
+    variant === "primary" && "button-sheen bg-brand text-white shadow-soft hover:bg-ember",
     variant === "secondary" && "border border-ink/15 bg-white text-ink hover:border-brand hover:text-brand",
     variant === "ghost" && "text-ink hover:bg-blush",
     className

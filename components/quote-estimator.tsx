@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { Calculator, CheckCircle2, Send } from "lucide-react";
 import { useMemo, useState } from "react";
 import { Button } from "@/components/button";
@@ -25,7 +26,7 @@ export function QuoteEstimator() {
   }).format(estimate);
 
   return (
-    <div className="rounded-lg border border-ink/10 bg-white p-5 shadow-soft">
+    <motion.div className="rounded-lg border border-ink/10 bg-white p-5 shadow-soft" whileHover={{ y: -5 }} transition={{ duration: 0.25 }}>
       <div className="mb-5 flex items-center gap-3">
         <span className="grid size-10 place-items-center rounded-md bg-blush text-brand">
           <Calculator size={20} />
@@ -60,9 +61,17 @@ export function QuoteEstimator() {
         </label>
       </div>
 
-      <div className="my-5 rounded-md bg-ink p-4 text-white">
+      <div className="my-5 overflow-hidden rounded-md bg-ink p-4 text-white">
         <p className="text-sm text-white/70">Planning estimate</p>
-        <p className="text-2xl font-bold">{formatted}</p>
+        <motion.p
+          key={formatted}
+          className="text-2xl font-bold"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.22 }}
+        >
+          {formatted}
+        </motion.p>
       </div>
 
       <ul className="mb-5 grid gap-2 text-sm text-ink/70">
@@ -76,6 +85,6 @@ export function QuoteEstimator() {
       <Button className="w-full" href={whatsappHref(`Hello Firm Ant, my estimated project budget is ${formatted}. Please contact me.`)}>
         <Send size={18} /> Send estimate on WhatsApp
       </Button>
-    </div>
+    </motion.div>
   );
 }

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useMemo, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { MapPin } from "lucide-react";
 import { projects } from "@/lib/content";
 import { cn } from "@/lib/utils";
@@ -23,7 +24,7 @@ export function ProjectFilter() {
             key={item}
             onClick={() => setCategory(item)}
             className={cn(
-              "focus-ring shrink-0 rounded-md border px-4 py-2 text-sm font-semibold transition",
+              "focus-ring shrink-0 rounded-md border px-4 py-2 text-sm font-semibold transition hover:-translate-y-0.5",
               category === item ? "border-brand bg-brand text-white" : "border-ink/15 bg-white text-ink/70 hover:border-brand"
             )}
           >
@@ -32,11 +33,27 @@ export function ProjectFilter() {
         ))}
       </div>
 
-      <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-        {visibleProjects.map((project) => (
-          <article key={project.title} className="overflow-hidden rounded-lg border border-ink/10 bg-white shadow-soft">
-            <div className="relative aspect-[4/3]">
-              <Image src={project.image} alt={project.title} fill className="object-cover" sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw" />
+      <motion.div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4" layout>
+        <AnimatePresence mode="popLayout">
+          {visibleProjects.map((project) => (
+          <motion.article
+            key={project.title}
+            layout
+            initial={{ opacity: 0, y: 24, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 14, scale: 0.96 }}
+            whileHover={{ y: -8 }}
+            transition={{ duration: 0.42, ease: [0.22, 1, 0.36, 1] }}
+            className="group overflow-hidden rounded-lg border border-ink/10 bg-white shadow-soft"
+          >
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                className="object-cover transition duration-700 group-hover:scale-105"
+                sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw"
+              />
             </div>
             <div className="p-4">
               <div className="mb-2 flex items-center gap-2 text-sm text-brand">
@@ -45,9 +62,10 @@ export function ProjectFilter() {
               <h3 className="text-lg font-bold">{project.title}</h3>
               <p className="mt-2 text-sm text-ink/65">{project.scope}</p>
             </div>
-          </article>
-        ))}
-      </div>
+          </motion.article>
+          ))}
+        </AnimatePresence>
+      </motion.div>
     </div>
   );
 }
