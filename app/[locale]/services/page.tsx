@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { CheckCircle2, MessageCircle } from "lucide-react";
 import { Button } from "@/components/button";
-import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/motion";
 import { servicesDetail } from "@/lib/content";
 import { copy, type Locale } from "@/lib/i18n";
@@ -20,13 +19,36 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
 
   return (
     <main>
-      <PageHero
-        eyebrow={t.servicesEyebrow as string}
-        title={t.servicesTitle as string}
-        subtitle={t.servicesSubtitle as string}
-        bgImage="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2200&q=85"
-        bgAlt="Construction project in progress, Cameroon"
-      />
+      {/* ── Hero with video background ─────────────────────────────────── */}
+      <section className="relative flex min-h-[44vh] items-end overflow-hidden bg-ink pb-14 pt-32 text-white lg:min-h-[54vh] lg:pb-20 lg:pt-40">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          className="absolute inset-0 size-full object-cover opacity-25"
+        >
+          <source src="/Images/Interior%20Design/interior.mp4" type="video/mp4" />
+        </video>
+        {/* Gradient overlays */}
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/20" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_15%,rgba(201,21,33,0.22),transparent_50%)]" />
+
+        <div className="relative mx-auto w-full max-w-7xl px-4 lg:px-8">
+          <Reveal>
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-ember">
+              {t.servicesEyebrow as string}
+            </p>
+            <h1 className="mt-3 max-w-4xl text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">
+              {t.servicesTitle as string}
+            </h1>
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-white/72">
+              {t.servicesSubtitle as string}
+            </p>
+          </Reveal>
+        </div>
+      </section>
 
       {/* ── 6 alternating service sections ───────────────────────────── */}
       {servicesDetail.map((service, index) => {

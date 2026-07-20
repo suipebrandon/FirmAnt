@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { MessageCircle } from "lucide-react";
+import Link from "next/link";
+import { ChevronRight, MessageCircle } from "lucide-react";
 import { Button } from "@/components/button";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/motion";
@@ -27,8 +28,25 @@ export default async function PortfolioPage({ params }: { params: Promise<{ loca
         bgAlt="Completed residential construction project"
       />
 
+      {/* ── Breadcrumb ────────────────────────────────────────────────── */}
+      <nav className="bg-white py-3" aria-label="Breadcrumb">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <ol className="flex items-center gap-1.5 text-sm font-medium text-ink/60">
+            <li>
+              <Link href={`/${locale}`} className="transition hover:text-brand">
+                Home
+              </Link>
+            </li>
+            <ChevronRight size={14} className="text-ink/30" />
+            <li className="text-ink" aria-current="page">
+              Portfolio
+            </li>
+          </ol>
+        </div>
+      </nav>
+
       {/* ── Project gallery ───────────────────────────────────────────── */}
-      <section className="py-16 lg:py-24">
+      <section className="pb-16 lg:pb-24">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <ProjectFilter />
         </div>
