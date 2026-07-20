@@ -4,7 +4,7 @@
 
 :root {
   color-scheme: light;
-  --font-inter: "Inter";
+  --font-inter: "Inter", system-ui, sans-serif;
 }
 
 html {
@@ -16,6 +16,7 @@ body {
   color: #0a0a0a;
 }
 
+/* ── Hero video / image overlays ─────────────────────────────────────── */
 .hero-image {
   animation: hero-ken-burns 18s ease-out both;
 }
@@ -28,6 +29,7 @@ body {
   mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent 72%);
 }
 
+/* ── Button sheen ────────────────────────────────────────────────────── */
 .button-sheen {
   position: relative;
   isolation: isolate;
@@ -48,6 +50,27 @@ body {
   transform: translateX(120%);
 }
 
+/* ── Form field ──────────────────────────────────────────────────────── */
+.field {
+  width: 100%;
+  border-radius: 0.375rem;
+  border: 1px solid rgb(10 10 10 / 0.15);
+  background: white;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.field:focus {
+  border-color: #99000a;
+  box-shadow: 0 0 0 3px rgb(201 21 33 / 0.16);
+}
+
+/* ── Animations ──────────────────────────────────────────────────────── */
 @keyframes hero-ken-burns {
   from {
     transform: scale(1.04);
@@ -58,15 +81,18 @@ body {
   }
 }
 
+/* ── Selection ───────────────────────────────────────────────────────── */
 ::selection {
   background: #99000a;
   color: white;
 }
 
+/* ── Focus ring utility ──────────────────────────────────────────────── */
 .focus-ring {
   @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-ember focus-visible:ring-offset-2;
 }
 
+/* ── Responsive nav: desktop visible at ≥ 1024px ─────────────────────── */
 .desktop-nav {
   display: flex;
 }
@@ -76,7 +102,7 @@ body {
   display: none;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .desktop-nav {
     display: none;
   }
@@ -87,6 +113,7 @@ body {
   }
 }
 
+/* ── Reduced motion ──────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

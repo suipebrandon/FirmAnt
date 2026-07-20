@@ -1,6 +1,9 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://firmantafrica.com"),
@@ -17,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.variable}>
       <body>
         {children}
         <Analytics />
