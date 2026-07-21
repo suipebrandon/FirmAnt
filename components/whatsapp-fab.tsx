@@ -1,13 +1,13 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
-import { MotionA } from "@/components/motion";
 import { whatsappHref } from "@/lib/utils";
 
 /** Floating WhatsApp action button — fixed bottom-right on every page */
 export function WhatsAppFab() {
   return (
-    <MotionA
+    <motion.a
       href={whatsappHref("Hello Firm Ant, I need help with a construction project.")}
       className="focus-ring fixed bottom-5 right-5 z-50 inline-flex size-14 items-center justify-center rounded-full bg-brand text-white shadow-soft transition hover:bg-ember"
       aria-label="Chat with Firm Ant on WhatsApp"
@@ -20,6 +20,6 @@ export function WhatsAppFab() {
       transition={{ type: "spring", stiffness: 260, damping: 18, delay: 1 }}
     >
       <MessageCircle size={24} />
-    </MotionA>
+    </motion.a>
   );
 }

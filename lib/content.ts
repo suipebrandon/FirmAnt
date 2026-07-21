@@ -178,7 +178,7 @@ export const projects = [
     location: "Douala",
     year: "2025",
     scope: "Space planning, renovation, painting",
-    image: ""
+    image: "/Images/Building Construction/shop.jpg"
   },
   {
     title: "Before & After Apartment Upgrade",

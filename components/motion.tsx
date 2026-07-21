@@ -80,5 +80,3 @@ export function FloatIn({ className, children, ...props }: HTMLMotionProps<"div"
 }
 
 export const MotionDiv = motion.div;
-export const MotionArticle = motion.article;
-export const MotionA = motion.a;
