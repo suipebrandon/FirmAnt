@@ -6,6 +6,8 @@ import { MotionDiv, Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { contact, projects, services, testimonials } from "@/lib/content";
 import { copy, type Locale } from "@/lib/i18n";
 import { whatsappHref } from "@/lib/utils";
+import { StatsCounter } from "@/components/stats-counter";
+import { ProcessSection } from "@/components/process-section";
 
 export const metadata: Metadata = {
   title: "Construction Company in Buea, Cameroon",
@@ -130,6 +132,12 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
           ))}
         </Stagger>
       </section>
+
+      {/* ── Stats Counter ────────────────────────────────────────────── */}
+      <StatsCounter />
+
+      {/* ── Process Section ──────────────────────────────────────────── */}
+      <ProcessSection />
 
       {/* ── Services Teaser ──────────────────────────────────────────── */}
       <section className="py-16 lg:py-24">

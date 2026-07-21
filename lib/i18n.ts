@@ -79,6 +79,14 @@ export const copy = {
     hoursTitle: "Working hours",
     followUs: "Get in touch",
 
+    // ── Process Section ──────────────────────────────────────────────────
+    processEyebrow: "How it works",
+    processTitle: "From first call to final handover",
+    processText: "A clear, proven process that keeps your project on budget, on time and up to standard.",
+
+    // ── Stats Counter ────────────────────────────────────────────────────
+    stats: ["8+ years experience", "50+ projects completed", "6 cities served across Cameroon", "98% client satisfaction"],
+
     // ── Shared ───────────────────────────────────────────────────────────
     why: "Built for clients who need trust, not guesswork"
   },
@@ -155,6 +163,14 @@ export const copy = {
       "Contactez-nous par WhatsApp, email ou ce formulaire. Nous répondons à toutes les demandes sous un jour ouvrable.",
     hoursTitle: "Horaires d'ouverture",
     followUs: "Nous joindre",
+
+    // ── Process Section ──────────────────────────────────────────────────
+    processEyebrow: "Comment ça marche",
+    processTitle: "Du premier appel à la remise finale",
+    processText: "Un processus clair et éprouvé qui maintient votre projet dans les délais, le budget et les normes de qualité.",
+
+    // ── Stats Counter ────────────────────────────────────────────────────
+    stats: ["8+ ans d'expérience", "50+ projets réalisés", "6 villes desservies au Cameroun", "98% satisfaction client"],
 
     // ── Shared ───────────────────────────────────────────────────────────
     why: "Pour les clients qui veulent la confiance, pas les surprises"

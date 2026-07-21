@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/button";
+import { DarkModeToggle } from "@/components/dark-mode-toggle";
 import { contact } from "@/lib/content";
 import { copy, navRoutes, type Locale } from "@/lib/i18n";
 import { cn, whatsappHref } from "@/lib/utils";
@@ -69,6 +70,9 @@ export function Header({ locale }: { locale: Locale }) {
               {label}
             </Link>
           ))}
+
+          {/* Dark mode toggle */}
+          <DarkModeToggle />
 
           {/* Locale switcher */}
           <Link
