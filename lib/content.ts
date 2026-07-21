@@ -162,7 +162,7 @@ export const projects = [
     location: "Buea",
     year: "2026",
     scope: "Construction, exterior finishing, paint",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80"
+    image: "/Images/Building Construction/IMG-20260708-WA0430.webp"
   },
   {
     title: "Community Church Hall",
@@ -170,7 +170,7 @@ export const projects = [
     location: "Limbe",
     year: "2025",
     scope: "Structure, roofing, stage, interior finishing",
-    image: "https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=1400&q=80"
+    image: "/Images/Church Buildings/IMG-20260708-WA0400.webp"
   },
   {
     title: "Commercial Shopfront Fit-Out",
@@ -178,7 +178,7 @@ export const projects = [
     location: "Douala",
     year: "2025",
     scope: "Space planning, renovation, painting",
-    image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=80"
+    image: ""
   },
   {
     title: "Before & After Apartment Upgrade",
