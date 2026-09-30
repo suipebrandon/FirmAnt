@@ -75,6 +75,21 @@ body.dark {
   animation: hero-ken-burns 18s ease-out both;
 }
 
+.home-video,
+.services-video {
+  object-position: center center;
+}
+
+@media (max-width: 639px) {
+  .home-video {
+    object-position: 58% center;
+  }
+
+  .services-video {
+    object-position: center center;
+  }
+}
+
 .hero-grid {
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),

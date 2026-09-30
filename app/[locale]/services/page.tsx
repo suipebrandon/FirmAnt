@@ -24,14 +24,14 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
   return (
     <main>
       {/* ── Hero with video background ─────────────────────────────────── */}
-      <section className="relative flex min-h-[44vh] items-end overflow-hidden bg-ink pb-14 pt-32 text-white lg:min-h-[54vh] lg:pb-20 lg:pt-40">
+      <section className="relative flex min-h-[46svh] items-end overflow-hidden bg-ink pb-14 pt-28 text-white sm:min-h-[44vh] lg:min-h-[54vh] lg:pb-20 lg:pt-40">
         <video
           autoPlay
           muted
           loop
           playsInline
           preload="metadata"
-          className="absolute inset-0 size-full object-cover opacity-25"
+          className="services-video absolute inset-0 size-full object-cover opacity-25"
         >
           <source src="/Images/Interior%20Design/interior.mp4" type="video/mp4" />
         </video>

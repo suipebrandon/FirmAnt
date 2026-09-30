@@ -49,14 +49,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
   return (
     <main>
       {/* ── Video Hero ────────────────────────────────────────────────── */}
-      <section className="relative min-h-screen overflow-hidden bg-ink text-white">
+      <section className="home-video-hero relative min-h-[calc(100svh-4.5rem)] overflow-hidden bg-ink text-white sm:min-h-screen">
         <video
           autoPlay
           muted
           loop
           playsInline
           preload="auto"
-          className="absolute inset-0 h-full w-full object-cover opacity-45"
+          className="home-video absolute inset-0 h-full w-full object-cover opacity-45"
         >
           <source src="/Images/Building%20Construction/firmant2.mp4" type="video/mp4" />
         </video>
@@ -64,7 +64,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_18%,rgba(201,21,33,0.38),transparent_36%)]" />
         <div className="hero-grid absolute inset-0 opacity-35" />
 
-        <div className="relative mx-auto grid min-h-screen max-w-7xl content-center px-4 py-20 lg:px-8">
+        <div className="relative mx-auto grid min-h-[calc(100svh-4.5rem)] max-w-7xl content-center px-4 py-20 sm:min-h-screen lg:px-8">
           <MotionDiv
             className="max-w-3xl"
             initial="hidden"
