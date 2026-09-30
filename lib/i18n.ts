@@ -71,6 +71,23 @@ export const copy = {
       "A growing catalogue of completed work across Cameroon — homes, churches, commercial builds, renovations and interiors.",
     ctaPortfolio: "Have a project in mind?",
 
+    // ── Portfolio — Signature work accordion ─────────────────────────────
+    signatureEyebrow: "Signature work",
+    signatureTitle: "A closer look at five categories of finished work",
+    signatureHint: "Expand a panel to preview the work, then open the full gallery below.",
+    signatureJump: "See this work",
+    signatureProjectsLabel: "projects",
+    signatureLabelResidential: "Residential Homes",
+    signatureLabelChurch: "Church Buildings",
+    signatureLabelCommercial: "Commercial Spaces",
+    signatureLabelRenovation: "Renovation & Remodeling",
+    signatureLabelInterior: "Interior & Finishing",
+    signatureCaptionResidential: "New homes, extensions and handover-ready finishing.",
+    signatureCaptionChurch: "Worship halls, stages and offices built for congregation growth.",
+    signatureCaptionCommercial: "Shops, offices and rental units planned for customer flow.",
+    signatureCaptionRenovation: "Defect correction and modernisation of outdated spaces.",
+    signatureCaptionInterior: "Paint, ceilings, joinery and custom furniture installation.",
+
     // ── Contact ──────────────────────────────────────────────────────────
     contactEyebrow: "Contact us",
     contactTitle: "Tell us what you want to build",
@@ -155,6 +172,23 @@ export const copy = {
     portfolioSubtitle:
       "Un catalogue croissant de travaux réalisés — maisons, églises, bâtiments commerciaux, rénovations et intérieurs.",
     ctaPortfolio: "Vous avez un projet en tête ?",
+
+    // ── Portfolio — Accordéon des réalisations phares ────────────────────
+    signatureEyebrow: "Réalisations phares",
+    signatureTitle: "Un aperçu de cinq catégories de travaux terminés",
+    signatureHint: "Dépliez un panneau pour un aperçu, puis ouvrez la galerie complète ci-dessous.",
+    signatureJump: "Voir ces travaux",
+    signatureProjectsLabel: "projets",
+    signatureLabelResidential: "Maisons résidentielles",
+    signatureLabelChurch: "Bâtiments d'église",
+    signatureLabelCommercial: "Espaces commerciaux",
+    signatureLabelRenovation: "Rénovation et remise à neuf",
+    signatureLabelInterior: "Intérieur et finitions",
+    signatureCaptionResidential: "Maisons neuves, extensions et finitions prêtes à livrer.",
+    signatureCaptionChurch: "Salles de culte, scènes et bureaux pensés pour la croissance.",
+    signatureCaptionCommercial: "Boutiques, bureaux et unités locatives pensés pour le flux client.",
+    signatureCaptionRenovation: "Correction des défauts et modernisation des espaces anciens.",
+    signatureCaptionInterior: "Peinture, plafonds, menuiserie et mobilier sur mesure.",
 
     // ── Contact ──────────────────────────────────────────────────────────
     contactEyebrow: "Contactez-nous",

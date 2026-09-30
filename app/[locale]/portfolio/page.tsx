@@ -5,6 +5,8 @@ import { Button } from "@/components/button";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/motion";
 import { ProjectFilter } from "@/components/project-filter";
+import { ImageAccordion, type AccordionPanel } from "@/components/image-accordion";
+import { allProjects, type ProjectCategory } from "@/lib/portfolio-data";
 import { copy, type Locale } from "@/lib/i18n";
 import { whatsappHref } from "@/lib/utils";
 
@@ -17,6 +19,60 @@ export const metadata: Metadata = {
 export default async function PortfolioPage({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
   const t = copy[locale];
+
+  /** Categories highlighted in the expanding accordion above the gallery */
+  const signatureCategories: {
+    id: string;
+    category: Exclude<ProjectCategory, "All">;
+    label: string;
+    caption: string;
+  }[] = [
+    {
+      id: "residential",
+      category: "Residential",
+      label: t.signatureLabelResidential as string,
+      caption: t.signatureCaptionResidential as string
+    },
+    {
+      id: "church",
+      category: "Church",
+      label: t.signatureLabelChurch as string,
+      caption: t.signatureCaptionChurch as string
+    },
+    {
+      id: "commercial",
+      category: "Commercial",
+      label: t.signatureLabelCommercial as string,
+      caption: t.signatureCaptionCommercial as string
+    },
+    {
+      id: "renovation",
+      category: "Renovation",
+      label: t.signatureLabelRenovation as string,
+      caption: t.signatureCaptionRenovation as string
+    },
+    {
+      id: "interior",
+      category: "Interior",
+      label: t.signatureLabelInterior as string,
+      caption: t.signatureCaptionInterior as string
+    }
+  ];
+
+  const signaturePanels: AccordionPanel[] = signatureCategories.flatMap((item) => {
+    const items = allProjects[item.category];
+    const cover = items[0];
+    if (!cover) return [];
+    return [
+      {
+        id: item.id,
+        label: item.label,
+        caption: item.caption,
+        meta: `${items.length} ${t.signatureProjectsLabel as string} · ${cover.location}`,
+        image: cover.image
+      }
+    ];
+  });
 
   return (
     <main>
@@ -45,8 +101,26 @@ export default async function PortfolioPage({ params }: { params: Promise<{ loca
         </div>
       </nav>
 
+      {/* ── Signature work accordion ─────────────────────────────────── */}
+      <section className="bg-blush/40 py-14 lg:py-20">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <Reveal>
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-brand">
+              {t.signatureEyebrow as string}
+            </p>
+            <h2 className="mt-3 max-w-3xl text-3xl font-black sm:text-4xl">
+              {t.signatureTitle as string}
+            </h2>
+            <p className="mt-4 max-w-2xl text-ink/70">{t.signatureHint as string}</p>
+          </Reveal>
+          <Reveal delay={0.1} className="mt-8">
+            <ImageAccordion panels={signaturePanels} jumpLabel={t.signatureJump as string} />
+          </Reveal>
+        </div>
+      </section>
+
       {/* ── Project gallery ───────────────────────────────────────────── */}
-      <section className="pb-16 lg:pb-24">
+      <section id="gallery" className="scroll-mt-24 pb-16 lg:pb-24">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <ProjectFilter />
         </div>

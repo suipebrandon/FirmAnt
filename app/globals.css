@@ -3,8 +3,12 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
   --font-inter: "Inter", system-ui, sans-serif;
+}
+
+.dark {
+  color-scheme: dark;
 }
 
 html {

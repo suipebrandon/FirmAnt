@@ -4,11 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, Phone, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/button";
 import { DarkModeToggle } from "@/components/dark-mode-toggle";
-import { contact } from "@/lib/content";
 import { copy, navRoutes, type Locale } from "@/lib/i18n";
 import { cn, whatsappHref } from "@/lib/utils";
 
@@ -82,19 +81,6 @@ export function Header({ locale }: { locale: Locale }) {
             {otherLocale}
           </Link>
 
-          {/* CTA — phone number on xl, "WhatsApp" text on lg */}
-          <Button
-            className="hidden xl:inline-flex"
-            href={whatsappHref("Hello Firm Ant, I need help with a construction project.")}
-          >
-            <Phone size={16} /> {contact.phoneDisplay}
-          </Button>
-          <Button
-            className="hidden lg:inline-flex xl:hidden"
-            href={whatsappHref("Hello Firm Ant, I need help with a construction project.")}
-          >
-            <Phone size={16} /> WhatsApp
-          </Button>
         </nav>
 
         {/* Hamburger — visible at < 1024px (see globals.css) */}
