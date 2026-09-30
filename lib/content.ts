@@ -65,7 +65,7 @@ export const servicesDetail = [
       "Exterior finishing and landscaping",
       "Roofing, guttering and waterproofing"
     ],
-    image: "https://images.unsplash.com/photo-1537041421496-d5a7dac58c08?auto=format&fit=crop&w=1400&q=80",
+    image: "/Images/Church Buildings/IMG-20260708-WA0400.webp",
     range: "From site assessment to complete build"
   },
   {
@@ -82,7 +82,7 @@ export const servicesDetail = [
       "Plumbing and electrical provisions",
       "Weekly photo update reports for diaspora clients"
     ],
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80",
+    image: "/Images/BuildinG Construction/IMG-20260708-WA0423.webp",
     range: "Small homes to premium residences"
   },
   {
@@ -99,7 +99,7 @@ export const servicesDetail = [
       "Design-build and fit-out packages",
       "Rental unit and multi-unit developments"
     ],
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80",
+    image: "/Images/Building Construction/shop.jpg",
     range: "Design-build and fit-out"
   },
   {
@@ -116,7 +116,7 @@ export const servicesDetail = [
       "Full-property modernization packages",
       "Before-and-after photo documentation"
     ],
-    image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=80",
+    image: "/Images/Interior Design/IMG-20260708-WA0490.webp",
     range: "Rooms, façades and full-property remodels"
   },
   {
@@ -133,7 +133,7 @@ export const servicesDetail = [
       "Exterior cladding, paint and facade upgrades",
       "Concept-to-installation project management"
     ],
-    image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1400&q=80",
+    image: "/Images/Interior Design/IMG-20260708-WA0496.webp",
     range: "Concept to installation"
   },
   {
@@ -150,7 +150,7 @@ export const servicesDetail = [
       "Quality inspections and punch-list sign-off",
       "Dedicated client communication channel"
     ],
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=80",
+    image: "/Images/Interior Design/IMG-20260708-WA0316.webp",
     range: "Weekly reporting available"
   }
 ];

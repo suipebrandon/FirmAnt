@@ -46,7 +46,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
           <Reveal delay={0.1}>
             <div className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-soft">
               <Image
-                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1400&q=80"
+                src="/Images/Company Brand/vision.webp"
                 alt="Firm Ant construction team at work"
                 fill
                 className="object-cover"
