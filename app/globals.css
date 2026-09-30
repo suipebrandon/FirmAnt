@@ -198,7 +198,8 @@ body.dark {
 }
 
 .mobile-menu-toggle,
-.mobile-menu-panel {
+.mobile-menu-panel,
+.mobile-header-controls {
   display: none;
 }
 
@@ -209,6 +210,9 @@ body.dark {
   .mobile-menu-toggle,
   .mobile-menu-panel {
     display: block;
+  }
+  .mobile-header-controls {
+    display: flex;
   }
 }
 

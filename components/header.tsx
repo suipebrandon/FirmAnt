@@ -97,15 +97,18 @@ export function Header({ locale }: { locale: Locale }) {
           </Button>  
         </nav>
 
-        {/* Hamburger — visible at < 1024px (see globals.css) */}
-        <button
-          className="mobile-menu-toggle focus-ring min-h-[44px] min-w-[44px] rounded-md bg-white/90 p-2 text-ink shadow-[0_8px_24px_rgba(10,10,10,0.08)]"
-          onClick={() => setOpen((v) => !v)}
-          aria-label="Toggle navigation menu"
-          aria-expanded={open}
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        {/* Mobile/tablet controls — visible below 1024px */}
+        <div className="mobile-header-controls items-center gap-2">
+          <DarkModeToggle />
+          <button
+            className="mobile-menu-toggle focus-ring min-h-[44px] min-w-[44px] rounded-md bg-white/90 p-2 text-ink shadow-[0_8px_24px_rgba(10,10,10,0.08)] dark:bg-white/10 dark:text-white"
+            onClick={() => setOpen((v) => !v)}
+            aria-label="Toggle navigation menu"
+            aria-expanded={open}
+          >
+            {open ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile drawer */}
