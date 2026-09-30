@@ -10,11 +10,15 @@ import { allProjects, type ProjectCategory } from "@/lib/portfolio-data";
 import { copy, type Locale } from "@/lib/i18n";
 import { whatsappHref } from "@/lib/utils";
 
-export const metadata: Metadata = {
-  title: "Portfolio",
-  description:
-    "Browse Firm Ant's completed projects across Cameroon — residential homes, church buildings, commercial spaces, renovations and interior designs."
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    title: locale === "fr" ? "Portfolio de projets" : "Project portfolio",
+    description: locale === "fr"
+      ? "Parcourez les projets réalisés par FirmAnt Cameroon : maisons, églises, espaces commerciaux, rénovations et intérieurs."
+      : "Browse FirmAnt Cameroon projects including homes, churches, commercial spaces, renovations and interiors."
+  };
+}
 
 export default async function PortfolioPage({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;

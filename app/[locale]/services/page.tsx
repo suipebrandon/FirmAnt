@@ -7,11 +7,15 @@ import { servicesDetail } from "@/lib/content";
 import { copy, type Locale } from "@/lib/i18n";
 import { whatsappHref } from "@/lib/utils";
 
-export const metadata: Metadata = {
-  title: "Services",
-  description:
-    "Firm Ant offers church buildings, residential homes, commercial properties, renovation, interior design, furniture and project management across Cameroon."
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    title: locale === "fr" ? "Services de construction et design" : "Construction and design services",
+    description: locale === "fr"
+      ? "Découvrez les services de construction, rénovation, design intérieur et gestion de projet de FirmAnt Cameroon."
+      : "Explore FirmAnt Cameroon services for construction, renovation, interior design and project management."
+  };
+}
 
 export default async function ServicesPage({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;

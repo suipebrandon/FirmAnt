@@ -10,6 +10,8 @@ export function DarkModeToggle() {
   useEffect(() => {
     // Light mode is the default; dark is used only if the visitor chose it.
     const isDark = localStorage.getItem("theme") === "dark";
+    // Hydration-safe initialization must happen after the browser mounts.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setDark(isDark);
     document.documentElement.classList.toggle("dark", isDark);
   }, []);

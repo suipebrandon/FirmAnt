@@ -4,6 +4,7 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { WhatsAppFab } from "@/components/whatsapp-fab";
 import { locales, type Locale } from "@/lib/i18n";
+import { siteUrl } from "@/lib/utils";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -21,9 +22,14 @@ export async function generateMetadata({
     alternates: {
       canonical: `/${rawLocale}`,
       languages: {
-        en: "/en",
-        fr: "/fr"
+        en: `${siteUrl}/en`,
+        fr: `${siteUrl}/fr`,
+        "x-default": `${siteUrl}/en`
       }
+    },
+    openGraph: {
+      url: `${siteUrl}/${rawLocale}`,
+      locale: rawLocale === "fr" ? "fr_CM" : "en_CM"
     }
   };
 }

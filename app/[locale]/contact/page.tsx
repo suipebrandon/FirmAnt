@@ -8,11 +8,15 @@ import { contact, workingHours } from "@/lib/content";
 import { copy, type Locale } from "@/lib/i18n";
 import { whatsappHref } from "@/lib/utils";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description:
-    "Get in touch with Firm Ant. Request a construction quote, WhatsApp us, or visit our office on Biaka Street, Buea, Cameroon."
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    title: locale === "fr" ? "Contacter FirmAnt Cameroon" : "Contact FirmAnt Cameroon",
+    description: locale === "fr"
+      ? "Contactez FirmAnt Cameroon pour un devis de construction, rénovation ou design à Buea et partout au Cameroun."
+      : "Contact FirmAnt Cameroon for a construction, renovation or design quote in Buea and across Cameroon."
+  };
+}
 
 export default async function ContactPage({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;

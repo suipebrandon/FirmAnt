@@ -8,11 +8,15 @@ import { brandValues, certifications, team } from "@/lib/content";
 import { copy, type Locale } from "@/lib/i18n";
 import { whatsappHref } from "@/lib/utils";
 
-export const metadata: Metadata = {
-  title: "About",
-  description:
-    "Learn about Firm Ant — a Buea-based construction and design company built on transparency, quality and client accountability across Cameroon."
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    title: locale === "fr" ? "À propos de FirmAnt Cameroon" : "About FirmAnt Cameroon",
+    description: locale === "fr"
+      ? "Découvrez FirmAnt Cameroon, une entreprise de construction basée à Buea et engagée pour la transparence et la qualité."
+      : "Learn about FirmAnt Cameroon, a Buea-based construction company committed to transparency and quality."
+  };
+}
 
 export default async function AboutPage({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;

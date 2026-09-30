@@ -8,12 +8,20 @@ import { copy, type Locale } from "@/lib/i18n";
 import { whatsappHref } from "@/lib/utils";
 import { StatsCounter } from "@/components/stats-counter";
 import { ProcessSection } from "@/components/process-section";
+import { siteUrl } from "@/lib/utils";
 
-export const metadata: Metadata = {
-  title: "Construction Company in Buea, Cameroon",
-  description:
-    "Firm Ant is a Buea-based construction and design company serving Cameroon with homes, churches, commercial builds, renovations, interiors and project management."
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const isFrench = locale === "fr";
+  return {
+    title: isFrench ? "Construction et design au Cameroun" : "Construction company in Buea, Cameroon",
+    description: isFrench
+      ? "FirmAnt Cameroon construit des maisons, églises et espaces commerciaux à Buea et partout au Cameroun."
+      : "FirmAnt Cameroon builds homes, churches and commercial spaces in Buea and across Cameroon.",
+    alternates: { canonical: `${siteUrl}/${locale}` },
+    openGraph: { title: isFrench ? "FirmAnt Cameroon | Construction et design" : "FirmAnt Cameroon | Construction and design" }
+  };
+}
 
 export default async function HomePage({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
@@ -32,7 +40,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
     telephone: contact.phoneDisplay,
     email: contact.email,
     areaServed: contact.cities,
-    url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://firmantafrica.com"
+    url: siteUrl
   };
 
   const featuredServices = services.slice(0, 3);
