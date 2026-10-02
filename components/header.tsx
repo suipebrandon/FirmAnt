@@ -4,13 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, Phone, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Button } from "@/components/button";
 import { DarkModeToggle } from "@/components/dark-mode-toggle";
-import { contact } from "@/lib/content";
 import { copy, navRoutes, type Locale } from "@/lib/i18n";
-import { cn, whatsappHref } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 
 export function Header({ locale }: { locale: Locale }) {
   const [open, setOpen] = useState(false);
@@ -82,19 +80,6 @@ export function Header({ locale }: { locale: Locale }) {
             {otherLocale}
           </Link>
 
-          {/* CTA — phone number on xl, "WhatsApp" text on lg */}
-          <Button
-            className="hidden xl:inline-flex"
-            href={whatsappHref("Hello Firm Ant, I need help with a construction project.")}
-          >
-            <Phone size={16} /> {contact.phoneDisplay}
-          </Button>
-          <Button
-            className="hidden lg:inline-flex xl:hidden"
-            href={whatsappHref("Hello Firm Ant, I need help with a construction project.")}
-          >
-            <Phone size={16} /> WhatsApp
-          </Button>  
         </nav>
 
         {/* Mobile/tablet controls — visible below 1024px */}
@@ -138,16 +123,13 @@ export function Header({ locale }: { locale: Locale }) {
                 </Link>
               ))}
             </nav>
-            <div className="flex gap-3">
-              <Button
-                className="flex-1"
-                href={whatsappHref("Hello Firm Ant, I need a quote.")}
+            <div className="flex justify-end">
+              <Link
+                className="rounded-full border border-brand/20 px-4 py-2 text-sm font-bold uppercase text-brand"
+                href={otherLocalePath}
               >
-                WhatsApp
-              </Button>
-              <Button className="flex-1" variant="secondary" href={otherLocalePath}>
                 {otherLocale.toUpperCase()}
-              </Button>
+              </Link>
             </div>
           </motion.div>
         )}
