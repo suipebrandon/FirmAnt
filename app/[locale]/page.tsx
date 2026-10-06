@@ -120,7 +120,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
                 className="border-transparent bg-[#25D366] text-white hover:border-transparent hover:bg-[#1ebe5d] hover:text-white"
                 href={whatsappHref("Hello Firm Ant, I want to discuss a project.")}
               >
-                <WhatsAppIcon className="size-[18px]" /> {t.whatsapp as string}
+                <WhatsAppIcon className="size-[16px]" /> {t.whatsapp as string}
               </Button>
             </MotionDiv>
           </MotionDiv>
