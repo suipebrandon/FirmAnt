@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ArrowRight, CheckCircle2, MessageCircle, ShieldCheck, Star } from "lucide-react";
 import { Button } from "@/components/button";
+import { WhatsAppIcon } from "@/components/whatsapp-icon";
 import { MotionDiv, Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { contact, projects, services, testimonials } from "@/lib/content";
 import { copy, type Locale } from "@/lib/i18n";
@@ -116,10 +117,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
                 {t.quote as string} <ArrowRight size={18} />
               </Button>
               <Button
-                variant="secondary"
+                className="border-transparent bg-[#25D366] text-white hover:border-transparent hover:bg-[#1ebe5d] hover:text-white"
                 href={whatsappHref("Hello Firm Ant, I want to discuss a project.")}
               >
-                <MessageCircle size={18} /> {t.whatsapp as string}
+                <WhatsAppIcon className="size-[18px]" /> {t.whatsapp as string}
               </Button>
             </MotionDiv>
           </MotionDiv>
