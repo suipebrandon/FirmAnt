@@ -252,12 +252,12 @@ export const resources = [
 
 /** Team members — update with real data when available */
 export const team = [
-  { name: "Emmanuel Tabi", role: "Founder & Managing Director", initials: "ET", color: "bg-brand" },
-  { name: "Grace Nkeng", role: "Project Manager", initials: "GN", color: "bg-graphite" },
-  { name: "Bernard Afe", role: "Senior Site Supervisor", initials: "BA", color: "bg-brand" },
-  { name: "Sylvie Mboua", role: "Interior & Design Lead", initials: "SM", color: "bg-graphite" },
-  { name: "Patrick Njong", role: "Procurement Officer", initials: "PN", color: "bg-brand" },
-  { name: "Amina Yusuf", role: "Client Relations", initials: "AY", color: "bg-graphite" }
+  { name: "Jones Reinhart", role: "Founder", initials: "JR", color: "bg-brand" },
+  { name: "Mbemngong Junior", role: "Manager", initials: "MJ", color: "bg-graphite" },
+  { name: "Naphtalie", role: "Human Resource", initials: "N", color: "bg-brand" },
+  { name: "Betino", role: "Procurement", initials: "B", color: "bg-graphite" },
+  { name: "Mbemngong Blaise", role: "3D Designer", initials: "MB", color: "bg-brand" },
+  { name: "Suipe Brandon", role: "Software Developer", initials: "SB", color: "bg-graphite" }
 ];
 
 export const brandValues = [
@@ -274,7 +274,7 @@ export const brandValues = [
   {
     title: "Accountability",
     description:
-      "Photo updates, timeline tracking and a dedicated point of contact — whether you are local or abroad."
+      "Photo updates, timeline tracking and a dedicated point of contact whether you are local or abroad."
   }
 ];
 
@@ -282,7 +282,7 @@ export const certifications = [
   "Registered with Ministry of Public Works, Cameroon",
   "Business registration & tax clearance",
   "Site safety compliance",
-  "Member — Cameroon Contractors Network"
+  "Member Cameroon Contractors Network"
 ];
 
 export const workingHours = [
