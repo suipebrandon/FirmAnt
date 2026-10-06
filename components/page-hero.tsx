@@ -8,13 +8,22 @@ interface PageHeroProps {
   bgImage: string;
   bgAlt: string;
   showGridlines?: boolean;
+  contentClassName?: string;
 }
 
 /**
  * Reusable interior-page hero banner.
  * Used on About, Services, Portfolio and Contact pages.
  */
-export function PageHero({ eyebrow, title, subtitle, bgImage, bgAlt, showGridlines = false }: PageHeroProps) {
+export function PageHero({
+  eyebrow,
+  title,
+  subtitle,
+  bgImage,
+  bgAlt,
+  showGridlines = false,
+  contentClassName = ""
+}: PageHeroProps) {
   return (
     <section className="relative flex min-h-[44vh] items-end overflow-hidden bg-ink pb-14 pt-32 text-white lg:min-h-[54vh] lg:pb-20 lg:pt-40">
       <Image
@@ -30,7 +39,7 @@ export function PageHero({ eyebrow, title, subtitle, bgImage, bgAlt, showGridlin
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_15%,rgba(201,21,33,0.22),transparent_50%)]" />
       {showGridlines && <div aria-hidden="true" className="hero-grid pointer-events-none absolute inset-0 opacity-35" />}
 
-      <div className="relative mx-auto w-full max-w-7xl px-4 lg:px-8">
+      <div className={`relative mx-auto w-full max-w-7xl px-4 lg:px-8 ${contentClassName}`}>
         <Reveal>
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-ember">{eyebrow}</p>
           <h1 className="mt-3 max-w-4xl text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">

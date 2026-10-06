@@ -31,6 +31,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         bgImage="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2200&q=85"
         bgAlt="Construction site overview, Cameroon"
         showGridlines
+        contentClassName="pb-4 lg:pb-6"
       />
 
       {/* ── Company story ────────────────────────────────────────────── */}
