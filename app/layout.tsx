@@ -44,7 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 telephone: contact.phoneDisplay,
                 address: {
                   "@type": "PostalAddress",
-                  streetAddress: "Biaka Street",
+                  streetAddress: "Head Office Bonduma, opposite Nabesk Junction",
                   addressLocality: "Buea",
                   addressCountry: "CM"
                 }

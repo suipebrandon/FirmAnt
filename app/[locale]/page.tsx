@@ -33,7 +33,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
     name: "Firm Ant Company",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Biaka Street",
+      streetAddress: "Head Office Bonduma, opposite Nabesk Junction",
       addressLocality: "Buea",
       addressCountry: "CM"
     },
@@ -80,7 +80,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
               variants={{ hidden: { opacity: 0, y: 18 }, show: { opacity: 1, y: 0 } }}
               transition={{ duration: 0.62, ease: [0.22, 1, 0.36, 1] }}
             >
-              <ShieldCheck size={18} /> Biaka Street, Buea · Serving all Cameroon
+              <ShieldCheck size={18} /> Head Office Bonduma, opposite Nabesk Junction · Serving all Cameroon
             </MotionDiv>
 
             {/* Headline */}

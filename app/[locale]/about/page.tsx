@@ -120,7 +120,6 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             ))}
           </Stagger>
           <p className="mt-6 text-sm text-ink/45">
-            * Team details are placeholders — update with real staff profiles when ready.
           </p>
         </div>
       </section>

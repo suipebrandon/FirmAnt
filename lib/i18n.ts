@@ -13,7 +13,7 @@ export const copy = {
     // ── Home — Hero ──────────────────────────────────────────────────────
     heroTitle: "Build Your Dream Home, Church or Commercial Space with Firm Ant",
     heroText:
-      "Reliable construction, renovation and design from Biaka Street, Buea to every region of Cameroon. Clear budgets, careful supervision and first-class finishing.",
+      "Reliable construction, renovation and design from Head Office Bonduma, opposite Nabesk Junction, Buea to every region of Cameroon. Clear budgets, careful supervision and first-class finishing.",
     quote: "Request a quote",
     whatsapp: "WhatsApp us",
     trust: ["Buea-based team", "Serving all Cameroon", "Transparent project updates", "Quality finishing guarantee"],
@@ -45,9 +45,9 @@ export const copy = {
     aboutSubtitle:
       "A Cameroon-based construction company committed to transparent builds and first-class finishing.",
     storyEyebrow: "Our story",
-    storyTitle: "From Biaka Street to all of Cameroon",
+    storyTitle: "From Head Office Bonduma to all of Cameroon",
     storyText:
-      "Firm Ant was founded in Buea with a single conviction: construction in Cameroon should be predictable, honest and high-quality. Too many clients — especially diaspora homeowners — have experienced delays, hidden costs and disappointing finishes from contractors who overpromised. We set out to change that. Starting from Biaka Street, we built a team that combines solid technical skills with clear communication, photo updates and fair budgets. Today we serve clients across Buea, Limbe, Bamenda, Yaounde and Douala — building homes, churches, commercial spaces and more.",
+      "Firm Ant was founded in Buea with a single conviction: construction in Cameroon should be predictable, honest and high-quality. Too many clients — especially diaspora homeowners — have experienced delays, hidden costs and disappointing finishes from contractors who overpromised. We set out to change that. Starting from Head Office Bonduma, opposite Nabesk Junction, we built a team that combines solid technical skills with clear communication, photo updates and fair budgets. Today we serve clients across Buea, Limbe, Bamenda, Yaounde and Douala — building homes, churches, commercial spaces and more.",
     missionEyebrow: "Mission & values",
     missionTitle: "Why clients trust Firm Ant",
     teamEyebrow: "The team",
@@ -115,7 +115,7 @@ export const copy = {
     // ── Home — Hero ──────────────────────────────────────────────────────
     heroTitle: "Construisez votre maison, église ou espace commercial avec Firm Ant",
     heroText:
-      "Construction, rénovation et design fiables depuis Biaka Street, Buea vers tout le Cameroun. Budgets clairs, suivi rigoureux et finitions de première qualité.",
+      "Construction, rénovation et design fiables depuis Head Office Bonduma, opposite Nabesk Junction, Buea vers tout le Cameroun. Budgets clairs, suivi rigoureux et finitions de première qualité.",
     quote: "Demander un devis",
     whatsapp: "WhatsApp",
     trust: ["Équipe basée à Buea", "Service partout au Cameroun", "Suivi transparent", "Garantie de finition"],
@@ -147,9 +147,9 @@ export const copy = {
     aboutSubtitle:
       "Une entreprise de construction camerounaise engagée dans des constructions transparentes et des finitions de première qualité.",
     storyEyebrow: "Notre histoire",
-    storyTitle: "De Biaka Street à tout le Cameroun",
+    storyTitle: "De Head Office Bonduma à tout le Cameroun",
     storyText:
-      "Firm Ant a été fondée à Buea avec une conviction : la construction au Cameroun doit être prévisible, honnête et de haute qualité. Trop de clients — notamment de la diaspora — ont connu des retards, des coûts cachés et des finitions décevantes. Nous avons décidé de changer cela. En partant de Biaka Street, nous avons constitué une équipe alliant compétences techniques solides, communication claire, mises à jour photo et budgets équitables. Aujourd'hui, nous servons des clients à Buea, Limbe, Bamenda, Yaoundé et Douala.",
+      "Firm Ant a été fondée à Buea avec une conviction : la construction au Cameroun doit être prévisible, honnête et de haute qualité. Trop de clients — notamment de la diaspora — ont connu des retards, des coûts cachés et des finitions décevantes. Nous avons décidé de changer cela. En partant de Head Office Bonduma, opposite Nabesk Junction, nous avons constitué une équipe alliant compétences techniques solides, communication claire, mises à jour photo et budgets équitables. Aujourd'hui, nous servons des clients à Buea, Limbe, Bamenda, Yaoundé et Douala.",
     missionEyebrow: "Mission et valeurs",
     missionTitle: "Pourquoi les clients font confiance à Firm Ant",
     teamEyebrow: "L'équipe",

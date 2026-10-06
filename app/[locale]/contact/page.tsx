@@ -98,10 +98,10 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
 
             {/* Map embed */}
             <iframe
-              title="Firm Ant location — Biaka Street, Buea"
+              title="Firm Ant location — Head Office Bonduma, opposite Nabesk Junction"
               className="mt-6 h-64 w-full rounded-xl border-0 shadow-soft"
               loading="lazy"
-              src="https://www.google.com/maps?q=Biaka%20Street%20Buea%20Cameroon&output=embed"
+              src="https://www.google.com/maps?q=Head%20Office%20Bonduma%2C%20opposite%20Nabesk%20Junction%2C%20Buea%2C%20Cameroon&output=embed"
             />
           </Reveal>
 

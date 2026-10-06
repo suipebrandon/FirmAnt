@@ -5,7 +5,7 @@ export const contact = {
   whatsapp: "237654270882",
   email: "firmantcompany@gmail.com",
   backupEmail: "firmantgrowthcatalyst@gmail.com",
-  address: "Biaka Street, Buea, Cameroon",
+  address: "Head Office Bonduma, opposite Nabesk Junction, Buea, Cameroon",
   cities: ["Buea", "Limbe", "Bamenda", "Yaounde", "Douala", "All Cameroon"]
 };
 
