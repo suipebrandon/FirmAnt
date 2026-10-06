@@ -2,7 +2,7 @@ import { contact } from "@/lib/content";
 
 export function Footer() {
   return (
-    <footer className="bg-ink py-12 text-white">
+    <footer className="border-t border-white/25 bg-ink py-12 text-white">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 md:grid-cols-3 lg:px-8">
         <div>
           <p className="text-xl font-black tracking-tight">Firm Ant</p>

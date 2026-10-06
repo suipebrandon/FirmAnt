@@ -30,6 +30,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         subtitle={t.aboutSubtitle as string}
         bgImage="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2200&q=85"
         bgAlt="Construction site overview, Cameroon"
+        showGridlines
       />
 
       {/* ── Company story ────────────────────────────────────────────── */}
@@ -56,13 +57,14 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                 className="object-cover"
                 sizes="(min-width: 1024px) 50vw, 100vw"
               />
+              <div aria-hidden="true" className="hero-grid pointer-events-none absolute inset-0 opacity-35" />
             </div>
           </Reveal>
         </div>
       </section>
 
       {/* ── Mission & Values ─────────────────────────────────────────── */}
-      <section className="bg-blush/50 py-16 lg:py-24">
+        <section className="bg-blush/50 py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <Reveal>
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-brand">

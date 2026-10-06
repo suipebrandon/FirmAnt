@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowRight, CheckCircle2, MessageCircle, ShieldCheck, Star } from "lucide-react";
+import { ArrowRight, CheckCircle2, MessageCircle, Star } from "lucide-react";
 import { Button } from "@/components/button";
 import { WhatsAppIcon } from "@/components/whatsapp-icon";
 import { MotionDiv, Reveal, Stagger, StaggerItem } from "@/components/motion";
@@ -75,15 +75,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
               show: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } }
             }}
           >
-            {/* Badge */}
-            <MotionDiv
-              className="mb-5 inline-flex items-center gap-2 rounded-md bg-white/12 px-3 py-2 text-sm font-semibold backdrop-blur"
-              variants={{ hidden: { opacity: 0, y: 18 }, show: { opacity: 1, y: 0 } }}
-              transition={{ duration: 0.62, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <ShieldCheck size={18} /> Head Office Bonduma, opposite Nabesk Junction · Serving all Cameroon
-            </MotionDiv>
-
             {/* Headline */}
             <MotionDiv
               variants={{
@@ -143,10 +134,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
       </section>
 
       {/* ── Stats Counter ────────────────────────────────────────────── */}
-      <StatsCounter />
+      <StatsCounter locale={locale} />
 
       {/* ── Process Section ──────────────────────────────────────────── */}
-      <ProcessSection />
+      <ProcessSection locale={locale} />
 
       {/* ── Services Teaser ──────────────────────────────────────────── */}
       <section className="py-16 lg:py-24">
@@ -160,18 +151,21 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
             </h2>
           </Reveal>
           <Stagger className="mt-8 grid gap-5 md:grid-cols-3">
-            {featuredServices.map((service) => (
+            {featuredServices.map((service, index) => {
+              const card = t.serviceTeaserCards[index];
+              return (
               <StaggerItem
-                key={service.title}
+                key={card.title}
                 className="rounded-lg border border-ink/10 bg-white p-6 shadow-soft transition-colors hover:border-brand/35"
                 whileHover={{ y: -7 }}
               >
                 <service.icon className="mb-4 text-brand" size={32} />
-                <h3 className="text-xl font-bold">{service.title}</h3>
-                <p className="mt-3 text-ink/67">{service.text}</p>
-                <p className="mt-4 text-sm font-semibold text-gold">{service.range}</p>
+                <h3 className="text-xl font-bold">{card.title}</h3>
+                <p className="mt-3 text-ink/67">{card.text}</p>
+                <p className="mt-4 text-sm font-semibold text-gold">{card.range}</p>
               </StaggerItem>
-            ))}
+              );
+            })}
           </Stagger>
           <div className="mt-10 text-center">
             <Button href={`/${locale}/services`} variant="secondary">

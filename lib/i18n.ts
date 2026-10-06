@@ -14,13 +14,31 @@ export const copy = {
     heroTitle: "Build Your Dream Home, Church or Commercial Space with Firm Ant",
     heroText:
       "Reliable construction, renovation and design from Head Office Bonduma, opposite Nabesk Junction, Buea to every region of Cameroon. Clear budgets, careful supervision and first-class finishing.",
-    quote: "Request a quote",
+    quote: "Talk to an expert",
     whatsapp: "WhatsApp us",
     trust: ["Buea-based team", "Serving all Cameroon", "Transparent project updates", "Quality finishing guarantee"],
+    statLabels: ["Years experience", "Projects completed", "Regions served across Cameroon", "Client satisfaction"] as [string, string, string, string],
 
     // ── Home — Services Teaser ───────────────────────────────────────────
     servicesTeaserEyebrow: "What we build",
     servicesTeaserTitle: "Construction and design services that fit your scope and budget",
+    serviceTeaserCards: [
+      {
+        title: "Church Buildings",
+        text: "Worship spaces, halls, stages, offices and finishing designed for durability, comfort and growth.",
+        range: "From site assessment to complete build"
+      },
+      {
+        title: "Residential Homes",
+        text: "New homes, extensions and finishing with clear budgets, material guidance and dependable supervision.",
+        range: "Small homes to premium residences"
+      },
+      {
+        title: "Commercial Properties",
+        text: "Shops, offices, rental units and business spaces planned for customer flow and long-term value.",
+        range: "Design-build and fit-out"
+      }
+    ],
     viewAllServices: "View all services",
 
     // ── Home — Portfolio Teaser ──────────────────────────────────────────
@@ -47,7 +65,7 @@ export const copy = {
     storyEyebrow: "Our story",
     storyTitle: "From Head Office Bonduma to all of Cameroon",
     storyText:
-      "Firm Ant was founded in Buea with a single conviction: construction in Cameroon should be predictable, honest and high-quality. Too many clients — especially diaspora homeowners — have experienced delays, hidden costs and disappointing finishes from contractors who overpromised. We set out to change that. Starting from Head Office Bonduma, opposite Nabesk Junction, we built a team that combines solid technical skills with clear communication, photo updates and fair budgets. Today we serve clients across Buea, Limbe, Bamenda, Yaounde and Douala — building homes, churches, commercial spaces and more.",
+      "Firm Ant was founded in Buea with a single conviction: construction in Cameroon should be predictable, honest and high-quality. Too many clients especially diaspora homeowners have experienced delays, hidden costs and disappointing finishes from contractors who overpromised. We set out to change that. Starting from Head Office Bonduma, opposite Nabesk Junction, we built a team that combines solid technical skills with clear communication, photo updates and fair budgets. Today we serve clients across Buea, Limbe, Bamenda, Yaounde and Douala building homes, churches, commercial spaces and more.",
     missionEyebrow: "Mission & values",
     missionTitle: "Why clients trust Firm Ant",
     teamEyebrow: "The team",
@@ -100,10 +118,30 @@ export const copy = {
     processEyebrow: "How it works",
     processTitle: "From first call to final handover",
     processText: "A clear, proven process that keeps your project on budget, on time and up to standard.",
+    processSteps: [
+      {
+        title: "1. Tell us about your project",
+        text: "Reach out by WhatsApp, email or our contact form. We will discuss scope, timeline and answer your initial questions — no commitment needed."
+      },
+      {
+        title: "2. Get a transparent quote",
+        text: "We inspect the site and provide an itemized quote with material pricing, labor breakdown and an estimated timeline. Every cost is explained before you approve."
+      },
+      {
+        title: "3. Approve and plan",
+        text: "Once you approve, we schedule the build, agree on milestone payments and set up your preferred update channel — WhatsApp, email or call."
+      },
+      {
+        title: "4. Build with oversight",
+        text: "Our team executes the work while you receive weekly photo updates, budget tracking and direct access to your project manager."
+      },
+      {
+        title: "5. Final inspection & handover",
+        text: "We walk through the completed work together, correct any issues from a punch list, and hand over a finish you are proud to show."
+      }
+    ],
 
     // ── Stats Counter ────────────────────────────────────────────────────
-    stats: ["8+ years experience", "50+ projects completed", "6 cities served across Cameroon", "98% client satisfaction"],
-
     // ── Shared ───────────────────────────────────────────────────────────
     why: "Built for clients who need trust, not guesswork"
   },
@@ -116,13 +154,31 @@ export const copy = {
     heroTitle: "Construisez votre maison, église ou espace commercial avec Firm Ant",
     heroText:
       "Construction, rénovation et design fiables depuis Head Office Bonduma, opposite Nabesk Junction, Buea vers tout le Cameroun. Budgets clairs, suivi rigoureux et finitions de première qualité.",
-    quote: "Demander un devis",
+    quote: "Parler à un expert",
     whatsapp: "WhatsApp",
     trust: ["Équipe basée à Buea", "Service partout au Cameroun", "Suivi transparent", "Garantie de finition"],
+    statLabels: ["Années d’expérience", "Projets réalisés", "Régions desservies au Cameroun", "Satisfaction client"] as [string, string, string, string],
 
     // ── Home — Services Teaser ───────────────────────────────────────────
     servicesTeaserEyebrow: "Ce que nous construisons",
     servicesTeaserTitle: "Des services de construction et de design adaptés à votre budget",
+    serviceTeaserCards: [
+      {
+        title: "Bâtiments religieux",
+        text: "Des lieux de culte, salles, estrades et bureaux conçus pour durer, offrir du confort et accompagner la croissance.",
+        range: "De l’étude du site à la construction complète"
+      },
+      {
+        title: "Maisons résidentielles",
+        text: "Maisons neuves, extensions et finitions avec budgets clairs, conseils sur les matériaux et suivi fiable.",
+        range: "Des petites maisons aux résidences haut de gamme"
+      },
+      {
+        title: "Bâtiments commerciaux",
+        text: "Magasins, bureaux, logements locatifs et espaces professionnels conçus pour accueillir les clients et offrir une valeur durable.",
+        range: "Conception, construction et aménagement"
+      }
+    ],
     viewAllServices: "Voir tous les services",
 
     // ── Home — Portfolio Teaser ──────────────────────────────────────────
@@ -202,11 +258,34 @@ export const copy = {
     processEyebrow: "Comment ça marche",
     processTitle: "Du premier appel à la remise finale",
     processText: "Un processus clair et éprouvé qui maintient votre projet dans les délais, le budget et les normes de qualité.",
+    processSteps: [
+      {
+        title: "1. Parlez-nous de votre projet",
+        text: "Contactez-nous par WhatsApp, e-mail ou via notre formulaire. Nous discuterons de vos besoins et du calendrier, et répondrons à vos premières questions, sans engagement."
+      },
+      {
+        title: "2. Recevez un devis détaillé",
+        text: "Nous inspectons le site et préparons un devis détaillé indiquant le prix des matériaux, le coût de la main-d’œuvre et le calendrier estimé. Chaque coût est expliqué avant votre approbation."
+      },
+      {
+        title: "3. Validez et planifiez",
+        text: "Après votre approbation, nous planifions les travaux, convenons des paiements par étapes et mettons en place votre canal de suivi préféré : WhatsApp, e-mail ou téléphone."
+      },
+      {
+        title: "4. Construisez en toute confiance",
+        text: "Notre équipe réalise les travaux pendant que vous recevez des photos chaque semaine, un suivi du budget et un accès direct à votre chef de projet."
+      },
+      {
+        title: "5. Inspection finale et remise",
+        text: "Nous inspectons ensemble les travaux terminés, corrigeons les éventuels points à reprendre et vous remettons un ouvrage dont vous serez fier."
+      }
+    ],
 
     // ── Stats Counter ────────────────────────────────────────────────────
-    stats: ["8+ ans d'expérience", "50+ projets réalisés", "6 villes desservies au Cameroun", "98% satisfaction client"],
-
     // ── Shared ───────────────────────────────────────────────────────────
     why: "Pour les clients qui veulent la confiance, pas les surprises"
   }
-} satisfies Record<Locale, Record<string, string | string[]>>;
+} satisfies Record<
+  Locale,
+  Record<string, string | string[] | { title: string; text: string; range?: string }[]>
+>;

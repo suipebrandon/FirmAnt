@@ -286,7 +286,7 @@ export const certifications = [
 ];
 
 export const workingHours = [
-  { day: "Monday – Friday", hours: "7:00 AM – 6:00 PM" },
-  { day: "Saturday", hours: "8:00 AM – 4:00 PM" },
+  { day: "Tuesday – Friday", hours: "8:00 AM – 4:00 PM" },
+  { day: "Saturday", hours: "8:00 AM – 1:00 PM" },
   { day: "Sunday", hours: "Closed" }
 ];
