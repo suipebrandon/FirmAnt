@@ -68,8 +68,22 @@ export const copy = {
       "Firm Ant was founded in Buea with a single conviction: construction in Cameroon should be predictable, honest and high-quality. Too many clients especially diaspora homeowners have experienced delays, hidden costs and disappointing finishes from contractors who overpromised. We set out to change that. Starting from Head Office Bonduma, opposite Nabesk Junction, we built a team that combines solid technical skills with clear communication, photo updates and fair budgets. Today we serve clients across Buea, Limbe, Bamenda, Yaounde and Douala building homes, churches, commercial spaces and more.",
     missionEyebrow: "Mission & values",
     missionTitle: "Why clients trust Firm Ant",
+    missionValues: [
+      {
+        title: "Transparency",
+        description: "Every quote is itemized. Every cost change is communicated before it happens. No surprises at handover."
+      },
+      {
+        title: "Quality",
+        description: "Verified materials, skilled craftsmen and a punch-list process that does not cut corners on the final finish."
+      },
+      {
+        title: "Accountability",
+        description: "Photo updates, timeline tracking and a dedicated point of contact — whether you are local or abroad."
+      }
+    ],
     teamEyebrow: "The team",
-    teamTitle: "Partnerships & Staff",
+    teamTitle: "Meet Our Professional Team",
     teamSubtitle:
       "Experienced, accountable and client-focused professionals across construction, design and project management.",
     certsEyebrow: "Credentials",
@@ -208,8 +222,22 @@ export const copy = {
       "Firm Ant a été fondée à Buea avec une conviction : la construction au Cameroun doit être prévisible, honnête et de haute qualité. Trop de clients — notamment de la diaspora — ont connu des retards, des coûts cachés et des finitions décevantes. Nous avons décidé de changer cela. En partant de Head Office Bonduma, opposite Nabesk Junction, nous avons constitué une équipe alliant compétences techniques solides, communication claire, mises à jour photo et budgets équitables. Aujourd'hui, nous servons des clients à Buea, Limbe, Bamenda, Yaoundé et Douala.",
     missionEyebrow: "Mission et valeurs",
     missionTitle: "Pourquoi les clients font confiance à Firm Ant",
+    missionValues: [
+      {
+        title: "Transparence",
+        description: "Chaque devis est détaillé. Tout changement de coût est communiqué à l’avance. Aucune mauvaise surprise à la livraison."
+      },
+      {
+        title: "Qualité",
+        description: "Des matériaux vérifiés, des artisans qualifiés et une liste de contrôle rigoureuse pour une finition soignée jusque dans les détails."
+      },
+      {
+        title: "Responsabilité",
+        description: "Des photos régulières, un suivi du calendrier et un interlocuteur dédié, que vous soyez sur place ou à l’étranger."
+      }
+    ],
     teamEyebrow: "L'équipe",
-    teamTitle: "Partenariats et personnel",
+    teamTitle: "Rencontrez notre équipe de professionnels",
     teamSubtitle:
       "Des professionnels expérimentés, responsables et centrés sur le client dans la construction, le design et la gestion de projet.",
     certsEyebrow: "Certifications",
@@ -287,5 +315,8 @@ export const copy = {
   }
 } satisfies Record<
   Locale,
-  Record<string, string | string[] | { title: string; text: string; range?: string }[]>
+  Record<
+    string,
+    string | string[] | { title: string; text: string; range?: string }[] | { title: string; description: string }[]
+  >
 >;

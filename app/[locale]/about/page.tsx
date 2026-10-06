@@ -4,7 +4,7 @@ import { CheckCircle2, MessageCircle } from "lucide-react";
 import { Button } from "@/components/button";
 import { PageHero } from "@/components/page-hero";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion";
-import { brandValues, certifications, team } from "@/lib/content";
+import { certifications, team } from "@/lib/content";
 import { copy, type Locale } from "@/lib/i18n";
 import { whatsappHref } from "@/lib/utils";
 
@@ -75,7 +75,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             </h2>
           </Reveal>
           <Stagger className="mt-10 grid gap-6 md:grid-cols-3">
-            {brandValues.map((value, i) => (
+            {(t.missionValues as { title: string; description: string }[]).map((value, i) => (
               <StaggerItem
                 key={value.title}
                 className="rounded-xl border border-ink/10 bg-white p-6 shadow-soft"
