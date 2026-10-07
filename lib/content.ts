@@ -55,7 +55,7 @@ export const servicesDetail = [
     id: "church",
     icon: Church,
     title: "Church Buildings",
-    subtitle: "From foundation to final finish — worship spaces built for generations.",
+    subtitle: "From foundation to final finish worship spaces built for generations.",
     description:
       "From site assessment to complete build, Firm Ant delivers worship spaces designed for durability, acoustic comfort and congregational growth. We handle structure, roofing, interior finishing, stage construction and office fit-outs. Whether starting from a bare plot or completing a stalled build, our team manages every phase with clear reporting and on-budget delivery.",
     features: [
@@ -108,7 +108,7 @@ export const servicesDetail = [
     title: "Renovation & Remodeling",
     subtitle: "Correct defects, upgrade spaces and deliver the finish your brief always deserved.",
     description:
-      "Repair poor-quality work, modernize outdated spaces and upgrade finishes without losing control of cost or timing. We take over from failed contractors, correct structural and finishing defects, and deliver the standard the original brief promised. No hidden surprises — just honest assessment and reliable execution from day one.",
+      "Repair poor-quality work, modernize outdated spaces and upgrade finishes without losing control of cost or timing. We take over from failed contractors, correct structural and finishing defects, and deliver the standard the original brief promised. No hidden surprises just honest assessment and reliable execution from day one.",
     features: [
       "Defect correction and structural repair",
       "Kitchen, bathroom and floor upgrades",
@@ -140,7 +140,7 @@ export const servicesDetail = [
     id: "management",
     icon: ClipboardCheck,
     title: "Project Management",
-    subtitle: "Your trusted eyes on site — budget, schedule and quality in one weekly report.",
+    subtitle: "Your trusted eyes on site budget, schedule and quality in one weekly report.",
     description:
       "Planning, procurement, contractor coordination, photo progress updates and quality checks for local and diaspora clients. We act as your trusted representative on site, ensuring budgets are respected, timelines are met and finishing standards are maintained. Ideal for clients who cannot be on site daily but will not compromise on quality.",
     features: [

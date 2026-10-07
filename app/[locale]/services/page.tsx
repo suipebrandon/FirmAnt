@@ -24,7 +24,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
   return (
     <main>
       {/* ── Hero with video background ─────────────────────────────────── */}
-      <section className="relative flex min-h-[46svh] items-end overflow-hidden bg-ink pb-14 pt-28 text-white sm:min-h-[44vh] lg:min-h-[54vh] lg:pb-20 lg:pt-40">
+      <section className="relative flex min-h-[46svh] items-end overflow-hidden bg-ink pb-14 pt-28 text-white sm:min-h-[44vh] lg:min-h-[54vh] lg:pb-20 lg:pt-10">
         <video
           autoPlay
           muted
@@ -38,6 +38,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
         {/* Gradient overlays */}
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/20" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_15%,rgba(201,21,33,0.22),transparent_50%)]" />
+        <div aria-hidden="true" className="hero-grid pointer-events-none absolute inset-0 opacity-35" />
 
         <div className="relative mx-auto w-full max-w-7xl px-4 lg:px-8">
           <Reveal>
@@ -104,6 +105,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
 
                 <div className="mt-8">
                   <Button
+                    variant="whatsapp"
                     href={whatsappHref(
                       `Hello Firm Ant, I'm interested in your ${service.title} service.`
                     )}
@@ -124,6 +126,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
           <p className="mx-auto mt-5 max-w-2xl text-white/70">{t.ctaText as string}</p>
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Button
+              variant="whatsapp"
               href={whatsappHref("Hello Firm Ant, I want to discuss a project.")}
             >
               <MessageCircle size={18} /> {t.ctaWhatsapp as string}

@@ -25,7 +25,7 @@ export function PageHero({
   contentClassName = ""
 }: PageHeroProps) {
   return (
-    <section className="relative flex min-h-[44vh] items-end overflow-hidden bg-ink pb-14 pt-32 text-white lg:min-h-[54vh] lg:pb-20 lg:pt-40">
+    <section className="relative flex min-h-[44vh] items-end overflow-hidden bg-ink pb-14 pt-10 text-white lg:min-h-[54vh] lg:pb-20 lg:pt-10">
       <Image
         src={bgImage}
         alt={bgAlt}

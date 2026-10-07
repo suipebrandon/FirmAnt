@@ -44,7 +44,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             <h2 className="mt-3 text-3xl font-black sm:text-4xl">{t.storyTitle as string}</h2>
             <p className="mt-5 text-lg leading-8 text-ink/72">{t.storyText as string}</p>
             <div className="mt-8">
-              <Button href={whatsappHref("Hello Firm Ant, I want to discuss a project.")}>
+              <Button variant="whatsapp" href={whatsappHref("Hello Firm Ant, I want to discuss a project.")}>
                 <MessageCircle size={18} /> Start a project
               </Button>
             </div>

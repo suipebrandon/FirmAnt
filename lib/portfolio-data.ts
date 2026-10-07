@@ -60,7 +60,6 @@ const buildingConstruction = [
   { file: "/Images/Building Construction/IMG-20260708-WA0493.webp", loc: "Buea", year: "2026" },
   // Commercial projects from Building Construction
   { file: "/Images/Building Construction/IMG-20260708-WA0288.webp", loc: "Douala", year: "2025", cat: "Commercial" },
-  { file: "/Images/Building Construction/IMG-20260708-WA0402.webp", loc: "Douala", year: "2025", cat: "Commercial" },
 ];
 
 const churchImages = [
@@ -77,7 +76,6 @@ const churchImages = [
   { file: "/Images/Church Buildings/IMG-20260708-WA0377.webp", loc: "Buea", year: "2025" },
   { file: "/Images/Church Buildings/IMG-20260708-WA0379.webp", loc: "Buea", year: "2024" },
   { file: "/Images/Church Buildings/IMG-20260708-WA0382.webp", loc: "Buea", year: "2025" },
-  { file: "/Images/Church Buildings/IMG-20260708-WA0388.webp", loc: "Buea", year: "2025" },
   { file: "/Images/Church Buildings/IMG-20260708-WA0400.webp", loc: "Buea", year: "2025" },
   { file: "/Images/Church Buildings/IMG-20260708-WA0410.webp", loc: "Buea", year: "2025" },
   { file: "/Images/Church Buildings/IMG-20260708-WA0411.webp", loc: "Buea", year: "2025" },
@@ -158,21 +156,22 @@ const paintingImages = [
   { file: "/Images/Painting/617574953_122120477787060472_4541978532778151193_n.webp", loc: "Buea", year: "2025" },
   { file: "/Images/Painting/621810480_122120477403060472_3231692492885189232_n.webp", loc: "Buea", year: "2025" },
   { file: "/Images/Painting/IMG-20260708-WA0271.webp", loc: "Buea", year: "2025" },
-  { file: "/Images/Painting/IMG-20260708-WA0285.webp", loc: "Buea", year: "2025" },
 ];
 
 const roofingImages = [
+  { file: "/Images/Roofing Capentry/IMG-20260708-WA0319.webp", loc: "Limbe", year: "2025" },
+  { file: "/Images/Roofing Capentry/IMG-20260708-WA0460.webp", loc: "Buea", year: "2025" },
+  { file: "/Images/Roofing Capentry/IMG-20260708-WA0461.webp", loc: "Buea", year: "2025" },
+];
+
+const furnitureImages = [
   { file: "/Images/Roofing Capentry/IMG-20260708-WA0273.webp", loc: "Buea", year: "2025" },
   { file: "/Images/Roofing Capentry/IMG-20260708-WA0278.webp", loc: "Buea", year: "2025" },
   { file: "/Images/Roofing Capentry/IMG-20260708-WA0279.webp", loc: "Buea", year: "2025" },
   { file: "/Images/Roofing Capentry/IMG-20260708-WA0290.webp", loc: "Buea", year: "2025" },
   { file: "/Images/Roofing Capentry/IMG-20260708-WA0292.webp", loc: "Buea", year: "2025" },
   { file: "/Images/Roofing Capentry/IMG-20260708-WA0297.webp", loc: "Buea", year: "2025" },
-  { file: "/Images/Roofing Capentry/IMG-20260708-WA0319.webp", loc: "Limbe", year: "2025" },
   { file: "/Images/Roofing Capentry/IMG-20260708-WA0353.webp", loc: "Buea", year: "2025" },
-  { file: "/Images/Roofing Capentry/IMG-20260708-WA0355.webp", loc: "Buea", year: "2025" },
-  { file: "/Images/Roofing Capentry/IMG-20260708-WA0460.webp", loc: "Buea", year: "2025" },
-  { file: "/Images/Roofing Capentry/IMG-20260708-WA0461.webp", loc: "Buea", year: "2025" },
 ];
 
 const threeDImages = [
@@ -197,122 +196,53 @@ function toProjectItem(
   category: ProjectCategory,
   index: number
 ): ProjectItem {
-  const cat = (src.cat ?? category) as ProjectCategory;
+  const cat = (src.cat ?? category) as Exclude<ProjectCategory, "All">;
   const fileName = src.file.split("/").pop() ?? "";
-
-  // Generate a descriptive title based on category and context
-  const titles: Record<string, string[]> = {
-    Residential: [
-      "Modern Family Residence", "Residential Villa Project", "Private Home Construction",
-      "Two-Storey Residence", "Compact Family Home", "Residential Development",
-      "Contemporary Home Build", "Suburban Residence", "Single-Family Home",
-      "Residential Complex", "Home Extension Project", "Luxury Home Construction",
-      "Gated Community Home", "Townhouse Development", "Residential Renovation",
-      "Family Home Build", "Custom Residence", "Home Construction Project",
-      "Residential Structure", "Modern Home Design", "Hillside Residence",
-      "Garden Villa", "Eco-Friendly Home", "Residential Exterior Finish",
-      "Home Facade Upgrade", "Residential Roofing", "New Build Residence",
-      "Bungalow Construction", "Duplex Project", "Residential Interior",
-      "Home Foundation Work", "Residential Framing", "Exterior Cladding Home",
-      "Driveway & Landscape", "Residential Staircase", "Home Extension Buea",
-      "Complete Home Build", "Stone Residence", "Veranda & Terrace Build",
-    ],
-    Church: [
-      "Community Church Hall", "Pentecostal Assembly", "Church Sanctuary Build",
-      "Worship Centre Construction", "Church Auditorium", "Gospel Assembly Hall",
-      "Church Stage & Platform", "Multi-Purpose Church Hall", "Church Interior Finish",
-      "Church Roofing Project", "Christian Centre Build", "Church Exterior Finish",
-      "Chapel Construction", "Church Building Complex", "Church Seating Area",
-      "Church Office Fit-Out", "Church Facade Design", "Baptistry Construction",
-      "Church Fellowship Hall", "Cathedral-Style Build", "Church Education Block",
-      "Church Renovation", "Church Bell Tower", "Youth Church Centre",
-    ],
-    Commercial: [
-      "Office Block Fit-Out", "Commercial Shopfront", "Business Centre Build",
-      "Retail Space Construction", "Corporate Office Design", "Multi-Storey Commercial",
-      "Office Interior Finish", "Commercial Complex", "Shop & Retail Build",
-      "Office Renovation", "Commercial Property", "Workspace Interior Design",
-      "Executive Office Suite", "Commercial Building Exterior", "Office Partition Work",
-      "Reception & Lobby", "Office Flooring Project", "Conference Room Setup",
-      "Commercial Ceiling Work", "Store Front Construction", "Office Electrical Install",
-      "Commercial Plumbing", "Co-Working Space Build", "Office Block Renovation",
-    ],
-    Renovation: [
-      "Before & After Apartment", "Home Remodel Project", "Room Transformation",
-      "Kitchen Remodeling", "Bathroom Renovation", "Full Property Renovation",
-      "Interior Upgrade", "Space Modernization", "Ceiling Remodel",
-      "Floor Renovation", "Wall Finishing Upgrade", "Complete Home Makeover",
-      "Living Room Remodel", "Bedroom Renovation", "Exterior Facade Renewal",
-      "Structural Repair Work", "Old Building Refurb", "Apartment Makeover",
-      "Tile & Flooring Work", "Plastering & Rendering", "Before & After Showcase",
-    ],
-    Interior: [
-      "Modern Interior Design", "Living Space Styling", "Interior Decor Project",
-      "Room Interior Finish", "Elegant Interior Space", "Custom Interior Design",
-      "Ceiling & Lighting Design", "Wall Finish & Texture", "Interior Paint Work",
-      "Decorative Wall Feature", "Floor Tile Installation", "Kitchen Interior Design",
-      "Bathroom Interior Fit", "Staircase Interior", "Hallway Design",
-      "Bedroom Styling", "Open Plan Living", "Interior Color Scheme",
-      "Luxury Interior Finish", "Space Planning Project", "Interior Renovation",
-      "Curtains & Blinds", "Accent Wall Design", "Minimalist Interior",
-    ],
-    Roofing: [
-      "Roof Structure Build", "Carpentry & Roof Framing", "Roof Truss Installation",
-      "Residential Roofing", "Roof Waterproofing", "Metal Roofing Project",
-      "Roof Gutter Installation", "Timber Roof Structure", "Roof Repair & Maintenance",
-      "Roof Deck Construction", "Roof Ventilation Work", "Pergola & Awning Build",
-    ],
-    "3D Design": [
-      "3D Residential Concept", "Building Elevation Design", "Architectural 3D Render",
-      "Home Design Visualization", "3D Floor Plan Concept", "Exterior 3D Model",
-      "Interior 3D Rendering", "Structural 3D Design", "Building Concept Art",
-      "3D Architectural View", "Proposed Building Render", "Design Visualization",
-      "Architectural Perspective", "3D Master Plan", "Facade 3D Concept",
-    ],
+  const projectLabels: Record<Exclude<ProjectCategory, "All">, string> = {
+    Residential: "Residential Construction & Finishing",
+    Church: "Church Construction & Interior Finishing",
+    Commercial: "Commercial Construction & Fit-Out",
+    Renovation: "Interior Renovation & Finishing",
+    Interior: "Interior Design & Finishing",
+    Roofing: "Roof Construction & Installation",
+    "3D Design": "Architectural 3D Visualization",
   };
-
-  const catTitles = titles[cat] ?? titles["Residential"]!;
-  const title = catTitles[index % catTitles.length] ?? `${cat} Project ${index + 1}`;
-
-  const descriptions: Record<string, string[]> = {
-    Residential: [
-      "Completed residential construction with quality finishing in",
-      "Modern home built with durable materials and expert craftsmanship in",
-      "Residential project delivered with clear budgets and transparent reporting in",
-    ],
-    Church: [
-      "Worship space constructed with care and acoustic consideration in",
-      "Church building project delivered with quality finishes in",
-      "Sanctuary and hall construction completed in",
-    ],
-    Commercial: [
-      "Professional commercial space designed for business efficiency in",
-      "Office and retail construction with modern fit-out in",
-      "Commercial property built for long-term value in",
-    ],
-    Renovation: [
-      "Full property transformation with modern upgrades in",
-      "Renovation project correcting defects and improving finishes in",
-      "Space modernization and remodeling completed in",
-    ],
-    Interior: [
-      "Interior design and finishing project completed in",
-      "Custom interior styling with attention to detail in",
-      "Living space transformed with quality finishes in",
-    ],
-    Roofing: [
-      "Expert roof structure and carpentry work completed in",
-      "Roofing installation with durable materials and precision in",
-      "Roof framing and waterproofing project delivered in",
-    ],
-    "3D Design": [
-      "Architectural 3D visualization and design concept for",
-      "Digital building model and elevation design created for",
-    ],
+  const imageTitles: Record<string, string> = {
+    "642787942_122124093219060472_3357131735184768251_n.webp": "Church Sanctuary Altar",
+    "IMG-20260708-WA0363.webp": "Sanctuary Platform Finishing",
+    "IMG-20260708-WA0364.webp": "Sanctuary Wall Construction",
+    "IMG-20260708-WA0365.webp": "Church Interior Construction",
+    "IMG-20260708-WA0366.webp": "Church Hall Seating",
+    "IMG-20260708-WA0367.webp": "Church Interior Passage",
+    "IMG-20260708-WA0368.webp": "Church Hallway Construction",
+    "IMG-20260708-WA0370.webp": "Church Sanctuary and Seating",
+    "IMG-20260708-WA0371.webp": "Church Entrance Gate",
+    "IMG-20260708-WA0375.webp": "Sanctuary Ceiling and Lighting",
+    "IMG-20260708-WA0377.webp": "Church Sanctuary Seating",
+    "IMG-20260708-WA0379.webp": "Sanctuary Ceiling Finishing",
+    "IMG-20260708-WA0382.webp": "Church Interior Finishing",
+    "IMG-20260708-WA0400.webp": "Completed Church Sanctuary",
+    "IMG-20260708-WA0410.webp": "Church Roof Structure",
+    "IMG-20260708-WA0411.webp": "Church Hall Seating and Ceiling",
+    "IMG-20260708-WA0412.webp": "Church Interior Ceiling Finish",
+    "IMG-20260708-WA0414.webp": "Church Building Under Construction",
+    "IMG-20260708-WA0415.webp": "Church Exterior Construction",
+    "IMG-20260708-WA0427.webp": "Church Sanctuary Interior",
+    "IMG-20260708-WA0451.webp": "Sanctuary Altar Wall Finishing",
+    "IMG-20260708-WA0469.webp": "Church Hall Ceiling and Seating",
+    "IMG-20260708-WA0495.webp": "Church Interior Wall Finishing",
   };
-
-  const descList = descriptions[cat] ?? descriptions["Residential"]!;
-  const desc = `${descList[index % descList.length]} ${src.loc}.`;
+  const projectDescriptions: Record<Exclude<ProjectCategory, "All">, string> = {
+    Residential: "Residential building construction or finishing work photographed in",
+    Church: "Church construction, interior or finishing work photographed in",
+    Commercial: "Commercial building or office fit-out work photographed in",
+    Renovation: "Interior renovation and property improvement work photographed in",
+    Interior: "Interior finishing, painting or furniture work photographed in",
+    Roofing: "Roof installation or roof construction work photographed in",
+    "3D Design": "Architectural visualization or 3D building concept rendered for",
+  };
+  const title = imageTitles[fileName] ?? projectLabels[cat];
+  const desc = `${projectDescriptions[cat]} ${src.loc}.`;
 
   return {
     id: `${cat.toLowerCase().replace(/\s+/g, "-")}-${index}-${fileName}`,
@@ -350,6 +280,7 @@ function buildInterior(): ProjectItem[] {
   const all = [
     ...interiorImages.map((s) => ({ ...s, cat: "Interior" as const })),
     ...paintingImages.map((s) => ({ ...s, cat: "Interior" as const })),
+    ...furnitureImages.map((s) => ({ ...s, cat: "Interior" as const })),
   ];
   return all.map((s, i) => toProjectItem(s, "Interior", i));
 }

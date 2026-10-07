@@ -30,6 +30,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
         subtitle={t.contactSubtitle as string}
         bgImage="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=2200&q=85"
         bgAlt="Firm Ant office and construction site, Buea Cameroon"
+        showGridlines
       />
 
       {/* ── Main two-column layout ────────────────────────────────────── */}
@@ -90,6 +91,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
 
             {/* WhatsApp CTA */}
             <Button
+              variant="whatsapp"
               className="mt-6 w-full"
               href={whatsappHref("Hello Firm Ant, I want to discuss a project.")}
             >

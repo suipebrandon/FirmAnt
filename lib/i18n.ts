@@ -79,7 +79,7 @@ export const copy = {
       },
       {
         title: "Accountability",
-        description: "Photo updates, timeline tracking and a dedicated point of contact — whether you are local or abroad."
+        description: "Photo updates, timeline tracking and a dedicated point of contact whether you are local or abroad."
       }
     ],
     teamEyebrow: "The team",
@@ -100,7 +100,7 @@ export const copy = {
     portfolioEyebrow: "Portfolio",
     portfolioTitle: "Project proof clients can actually inspect",
     portfolioSubtitle:
-      "A growing catalogue of completed work across Cameroon — homes, churches, commercial builds, renovations and interiors.",
+      "A growing catalogue of completed work across Cameroon homes, churches, commercial builds, renovations and interiors.",
     ctaPortfolio: "Have a project in mind?",
 
     // ── Portfolio — Signature work accordion ─────────────────────────────
@@ -135,7 +135,7 @@ export const copy = {
     processSteps: [
       {
         title: "1. Tell us about your project",
-        text: "Reach out by WhatsApp, email or our contact form. We will discuss scope, timeline and answer your initial questions — no commitment needed."
+        text: "Reach out by WhatsApp, email or our contact form. We will discuss scope, timeline and answer your initial questions no commitment needed."
       },
       {
         title: "2. Get a transparent quote",
@@ -143,7 +143,7 @@ export const copy = {
       },
       {
         title: "3. Approve and plan",
-        text: "Once you approve, we schedule the build, agree on milestone payments and set up your preferred update channel — WhatsApp, email or call."
+        text: "Once you approve, we schedule the build, agree on milestone payments and set up your preferred update channel WhatsApp, email or call."
       },
       {
         title: "4. Build with oversight",

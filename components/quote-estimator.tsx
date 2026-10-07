@@ -82,7 +82,7 @@ export function QuoteEstimator() {
         ))}
       </ul>
 
-      <Button className="w-full" href={whatsappHref(`Hello Firm Ant, my estimated project budget is ${formatted}. Please contact me.`)}>
+      <Button variant="whatsapp" className="w-full" href={whatsappHref(`Hello Firm Ant, my estimated project budget is ${formatted}. Please contact me.`)}>
         <Send size={18} /> Send estimate on WhatsApp
       </Button>
     </motion.div>

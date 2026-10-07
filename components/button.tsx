@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 type ButtonProps = {
   href?: string;
   children: React.ReactNode;
-  variant?: "primary" | "secondary" | "ghost";
+  variant?: "primary" | "secondary" | "ghost" | "whatsapp";
   className?: string;
 };
 
@@ -14,6 +14,7 @@ export function Button({ href, children, variant = "primary", className }: Butto
     variant === "primary" && "button-sheen bg-brand text-white shadow-soft hover:bg-ember",
     variant === "secondary" && "border border-ink/15 bg-white text-ink hover:border-brand hover:text-brand",
     variant === "ghost" && "text-ink hover:bg-blush",
+    variant === "whatsapp" && "button-sheen bg-[#25D366] text-white shadow-soft hover:bg-[#1ebe5d]",
     className
   );
 

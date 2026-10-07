@@ -108,7 +108,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
                 {t.quote as string} <ArrowRight size={18} />
               </Button>
               <Button
-                className="border-transparent bg-[#25D366] text-white hover:border-transparent hover:bg-[#1ebe5d] hover:text-white"
+                variant="whatsapp"
                 href={whatsappHref("Hello Firm Ant, I want to discuss a project.")}
               >
                 <WhatsAppIcon className="size-[16px]" /> {t.whatsapp as string}
@@ -264,7 +264,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-white/70">{t.ctaText as string}</p>
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <Button href={whatsappHref("Hello Firm Ant, I want to start a project.")}>
+            <Button variant="whatsapp" href={whatsappHref("Hello Firm Ant, I want to start a project.")}>
               <MessageCircle size={18} /> {t.ctaWhatsapp as string}
             </Button>
             <Button variant="secondary" href={`/${locale}/contact`}>

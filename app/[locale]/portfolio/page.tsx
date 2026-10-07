@@ -86,6 +86,7 @@ export default async function PortfolioPage({ params }: { params: Promise<{ loca
         subtitle={t.portfolioSubtitle as string}
         bgImage="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2200&q=85"
         bgAlt="Completed residential construction project"
+        showGridlines
       />
 
       {/* ── Breadcrumb ────────────────────────────────────────────────── */}
@@ -137,6 +138,7 @@ export default async function PortfolioPage({ params }: { params: Promise<{ loca
           <p className="mx-auto mt-5 max-w-xl text-white/70">{t.ctaText as string}</p>
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Button
+              variant="whatsapp"
               href={whatsappHref("Hello Firm Ant, I want to discuss a project.")}
             >
               <MessageCircle size={18} /> {t.ctaWhatsapp as string}

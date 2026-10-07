@@ -96,7 +96,7 @@ export function ContactForm() {
       </button>
 
       <div className="grid gap-3 sm:grid-cols-2">
-        <Button href={whatsappHref(message)}>
+        <Button variant="whatsapp" href={whatsappHref(message)}>
           <MessageCircle size={18} /> Continue on WhatsApp
         </Button>
         <Button
