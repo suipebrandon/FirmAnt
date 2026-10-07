@@ -6,15 +6,16 @@ import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/motion";
 import { contact, workingHours } from "@/lib/content";
 import { copy, type Locale } from "@/lib/i18n";
-import { whatsappHref } from "@/lib/utils";
+import { localizedAlternates, whatsappHref } from "@/lib/utils";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
   const { locale } = await params;
   return {
     title: locale === "fr" ? "Contacter FirmAnt Cameroon" : "Contact FirmAnt Cameroon",
     description: locale === "fr"
       ? "Contactez FirmAnt Cameroon pour un devis de construction, rénovation ou design à Buea et partout au Cameroun."
-      : "Contact FirmAnt Cameroon for a construction, renovation or design quote in Buea and across Cameroon."
+      : "Contact FirmAnt Cameroon for a construction, renovation or design quote in Buea and across Cameroon.",
+    alternates: localizedAlternates(locale, "contact")
   };
 }
 

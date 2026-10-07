@@ -8,15 +8,16 @@ import { ProjectFilter } from "@/components/project-filter";
 import { ImageAccordion, type AccordionPanel } from "@/components/image-accordion";
 import { allProjects, type ProjectCategory } from "@/lib/portfolio-data";
 import { copy, type Locale } from "@/lib/i18n";
-import { whatsappHref } from "@/lib/utils";
+import { localizedAlternates, whatsappHref } from "@/lib/utils";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
   const { locale } = await params;
   return {
     title: locale === "fr" ? "Portfolio de projets" : "Project portfolio",
     description: locale === "fr"
       ? "Parcourez les projets réalisés par FirmAnt Cameroon : maisons, églises, espaces commerciaux, rénovations et intérieurs."
-      : "Browse FirmAnt Cameroon projects including homes, churches, commercial spaces, renovations and interiors."
+      : "Browse FirmAnt Cameroon projects including homes, churches, commercial spaces, renovations and interiors.",
+    alternates: localizedAlternates(locale, "portfolio")
   };
 }
 

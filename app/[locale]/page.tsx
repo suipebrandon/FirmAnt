@@ -6,10 +6,9 @@ import { WhatsAppIcon } from "@/components/whatsapp-icon";
 import { MotionDiv, Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { contact, projects, services, testimonials } from "@/lib/content";
 import { copy, type Locale } from "@/lib/i18n";
-import { whatsappHref } from "@/lib/utils";
+import { localizedAlternates, siteUrl, whatsappHref } from "@/lib/utils";
 import { StatsCounter } from "@/components/stats-counter";
 import { ProcessSection } from "@/components/process-section";
-import { siteUrl } from "@/lib/utils";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -19,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
     description: isFrench
       ? "FirmAnt Cameroon construit des maisons, églises et espaces commerciaux à Buea et partout au Cameroun."
       : "FirmAnt Cameroon builds homes, churches and commercial spaces in Buea and across Cameroon.",
-    alternates: { canonical: `${siteUrl}/${locale}` },
+    alternates: localizedAlternates(locale),
     openGraph: { title: isFrench ? "FirmAnt Cameroon | Construction et design" : "FirmAnt Cameroon | Construction and design" }
   };
 }

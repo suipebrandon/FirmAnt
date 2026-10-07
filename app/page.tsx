@@ -1,20 +1,23 @@
-"use client";
+import { redirect } from "next/navigation";
 
-import { useEffect } from "react";
+import type { Metadata } from "next";
+import { RootLocaleRedirect } from "@/components/root-locale-redirect";
+import { siteUrl } from "@/lib/utils";
+
+export const metadata: Metadata = {
+  title: "FirmAnt Cameroon | Construction & Design",
+  description:
+    "FirmAnt Cameroon builds homes, churches and commercial spaces in Buea and across Cameroon.",
+  alternates: {
+    canonical: `${siteUrl}/en/`,
+    languages: {
+      en: `${siteUrl}/en/`,
+      fr: `${siteUrl}/fr/`,
+      "x-default": `${siteUrl}/en/`,
+    },
+  },
+};
 
 export default function IndexPage() {
-  useEffect(() => {
-    window.location.replace("/en/");
-  }, []);
-
-  return (
-    <main className="grid min-h-screen place-items-center p-6 text-center">
-      <p>
-        Redirecting to the English site...{" "}
-        <a className="underline" href="/en/">
-          Continue to FirmAnt Cameroon
-        </a>
-      </p>
-    </main>
-  );
+  return <RootLocaleRedirect />;
 }

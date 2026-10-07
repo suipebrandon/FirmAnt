@@ -6,7 +6,7 @@ import { PageHero } from "@/components/page-hero";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { certifications, team } from "@/lib/content";
 import { copy, type Locale } from "@/lib/i18n";
-import { whatsappHref } from "@/lib/utils";
+import { localizedAlternates, whatsappHref } from "@/lib/utils";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -14,7 +14,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
     title: locale === "fr" ? "À propos de FirmAnt Cameroon" : "About FirmAnt Cameroon",
     description: locale === "fr"
       ? "Découvrez FirmAnt Cameroon, une entreprise de construction basée à Buea et engagée pour la transparence et la qualité."
-      : "Learn about FirmAnt Cameroon, a Buea-based construction company committed to transparency and quality."
+      : "Learn about FirmAnt Cameroon, a Buea-based construction company committed to transparency and quality.",
+    alternates: localizedAlternates(locale, "about")
   };
 }
 

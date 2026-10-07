@@ -19,14 +19,6 @@ export async function generateMetadata({
   if (!locales.includes(rawLocale as Locale)) notFound();
 
   return {
-    alternates: {
-      canonical: `/${rawLocale}`,
-      languages: {
-        en: `${siteUrl}/en`,
-        fr: `${siteUrl}/fr`,
-        "x-default": `${siteUrl}/en`
-      }
-    },
     openGraph: {
       url: `${siteUrl}/${rawLocale}`,
       locale: rawLocale === "fr" ? "fr_CM" : "en_CM"

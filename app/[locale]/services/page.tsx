@@ -5,15 +5,16 @@ import { Button } from "@/components/button";
 import { Reveal } from "@/components/motion";
 import { servicesDetail } from "@/lib/content";
 import { copy, type Locale } from "@/lib/i18n";
-import { whatsappHref } from "@/lib/utils";
+import { localizedAlternates, whatsappHref } from "@/lib/utils";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
   const { locale } = await params;
   return {
     title: locale === "fr" ? "Services de construction et design" : "Construction and design services",
     description: locale === "fr"
       ? "Découvrez les services de construction, rénovation, design intérieur et gestion de projet de FirmAnt Cameroon."
-      : "Explore FirmAnt Cameroon services for construction, renovation, interior design and project management."
+      : "Explore FirmAnt Cameroon services for construction, renovation, interior design and project management.",
+    alternates: localizedAlternates(locale, "services")
   };
 }
 
