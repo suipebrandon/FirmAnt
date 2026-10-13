@@ -9,6 +9,22 @@ import { copy, type Locale } from "@/lib/i18n";
 import { localizedAlternates, siteUrl, whatsappHref } from "@/lib/utils";
 import { StatsCounter } from "@/components/stats-counter";
 import { ProcessSection } from "@/components/process-section";
+import { FaqSection, type HomepageFaq } from "@/components/faq-section";
+import { sanityClient } from "@/lib/sanity";
+
+export const revalidate = 60;
+
+const HOMEPAGE_FAQS_QUERY = `*[
+  _type == "faq" &&
+  showOnHomepage == true &&
+  !(_id in path("drafts.**"))
+] | order(displayOrder asc, _createdAt asc) {
+  _id,
+  question,
+  answer,
+  category,
+  displayOrder
+}`;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -45,6 +61,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
 
   const featuredServices = services.slice(0, 3);
   const featuredProjects = projects.slice(0, 3);
+  const faqs = sanityClient
+    ? await sanityClient.fetch<HomepageFaq[]>(HOMEPAGE_FAQS_QUERY)
+    : [];
 
   return (
     <main>
@@ -254,6 +273,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
           </Stagger>
         </div>
       </section>
+
+      {/* ── Frequently asked questions ──────────────────────────────── */}
+      <FaqSection faqs={faqs} locale={locale} />
 
       {/* ── CTA Banner ───────────────────────────────────────────────── */}
       <section className="bg-ink py-16 text-white lg:py-24">
