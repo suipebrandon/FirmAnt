@@ -8,7 +8,7 @@ import { contact, projects, services, testimonials } from "@/lib/content";
 import { copy, type Locale } from "@/lib/i18n";
 import { localizedAlternates, siteUrl, whatsappHref } from "@/lib/utils";
 import { StatsCounter } from "@/components/stats-counter";
-import { ProcessSection } from "@/components/process-section";
+import { ConstructionImageRotator } from "@/components/construction-image-rotator";
 import { FaqSection, type HomepageFaq } from "@/components/faq-section";
 import { sanityClient } from "@/lib/sanity";
 
@@ -154,8 +154,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
       {/* ── Stats Counter ────────────────────────────────────────────── */}
       <StatsCounter locale={locale} />
 
-      {/* ── Process Section ──────────────────────────────────────────── */}
-      <ProcessSection locale={locale} />
+      {/* ── Construction Image Rotator ──────────────────────────────── */}
+      <ConstructionImageRotator locale={locale} />
 
       {/* ── Services Teaser ──────────────────────────────────────────── */}
       <section className="py-16 lg:py-24">

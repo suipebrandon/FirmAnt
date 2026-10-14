@@ -7,6 +7,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { certifications, team } from "@/lib/content";
 import { copy, type Locale } from "@/lib/i18n";
 import { localizedAlternates, whatsappHref } from "@/lib/utils";
+import { ProcessSection } from "@/components/process-section";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -64,6 +65,8 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
           </Reveal>
         </div>
       </section>
+
+      <ProcessSection locale={locale} />
 
       {/* ── Mission & Values ─────────────────────────────────────────── */}
         <section className="bg-blush/50 py-16 lg:py-24">
