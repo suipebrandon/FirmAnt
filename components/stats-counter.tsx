@@ -12,9 +12,9 @@ interface Stat {
 }
 
 const stats: Stat[] = [
-  { value: 8, suffix: "+", labelIndex: 0 },
-  { value: 50, suffix: "+", labelIndex: 1 },
-  { value: 6, suffix: "", labelIndex: 2, prefix: "" },
+  { value: 10, suffix: "+", labelIndex: 0 },
+  { value: 100, suffix: "+", labelIndex: 1 },
+  { value: 10, suffix: "", labelIndex: 2, prefix: "" },
   { value: 98, suffix: "%", labelIndex: 3 },
 ];
 

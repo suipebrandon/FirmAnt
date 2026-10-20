@@ -23,16 +23,18 @@ const slides = [
 
 const offerCopy = {
   en: {
-    title: "BUILDING A HOUSE??? Stop scrolling!",
+    title: "BUILDING A HOUSE???",
+    titleLine2: "Stop scrolling!",
     introduction:
-      "FIRMANT is giving YOU a FREE construction CHECK-UP. Entirely free! Whether you’re at architectural design, foundation, building, roofing, or finishing.",
+      "FIRMANT is giving YOU a FREE construction Consultation. Entirely free! Whether you’re at architectural design, foundation, building, roofing, or finishing.",
     details:
       "We’ll help you identify possible mistakes, material wastage, and costly problems before they become expensive.",
     conditions: ["No payment", "No obligation", "Very limited slots"],
     action: "Request your free check-up"
   },
   fr: {
-    title: "VOUS CONSTRUISEZ ? Arrêtez-vous ici !",
+    title: "VOUS CONSTRUISEZ ?",
+    titleLine2: "Arrêtez-vous ici !",
     introduction:
       "FIRMANT vous offre un BILAN DE CONSTRUCTION GRATUIT. Sans frais ! Que vous soyez à l’étape de la conception architecturale, des fondations, de la construction, de la toiture ou des finitions.",
     details:
@@ -42,6 +44,7 @@ const offerCopy = {
   }
 } satisfies Record<Locale, {
   title: string;
+  titleLine2: string;
   introduction: string;
   details: string;
   conditions: string[];
@@ -92,6 +95,7 @@ export function ConstructionImageRotator({ locale }: { locale: Locale }) {
         <div className="max-w-3xl">
           <h2 className="text-3xl font-black leading-tight sm:text-4xl lg:text-5xl">
             {offer.title}
+            <span className="block">{offer.titleLine2}</span>
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-7 text-white/90 sm:text-lg sm:leading-8">
             {offer.introduction}

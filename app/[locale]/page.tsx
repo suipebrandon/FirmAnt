@@ -101,7 +101,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
               }}
               transition={{ duration: 0.82, ease: [0.22, 1, 0.36, 1] }}
             >
-              <h1 className="text-4xl font-black leading-tight sm:text-5xl lg:text-6xl xl:text-7xl">
+              <h1 className="text-2xl font-black leading-tight sm:text-3xl lg:text-4xl xl:text-5xl">
                 {t.heroTitle as string}
               </h1>
             </MotionDiv>
@@ -113,6 +113,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
             >
               <p className="mt-5 max-w-2xl text-lg leading-8 text-white/80">
                 {t.heroText as string}
+                <span className="mt-1 block text-white">{t.heroOffice as string}</span>
               </p>
             </MotionDiv>
 
@@ -174,13 +175,28 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
               return (
               <StaggerItem
                 key={card.title}
-                className="rounded-lg border border-ink/10 bg-white p-6 shadow-soft transition-colors hover:border-brand/35"
+                className="overflow-hidden rounded-lg border border-ink/10 bg-white shadow-soft transition-colors hover:border-brand/35"
                 whileHover={{ y: -7 }}
               >
-                <service.icon className="mb-4 text-brand" size={32} />
-                <h3 className="text-xl font-bold">{card.title}</h3>
-                <p className="mt-3 text-ink/67">{card.text}</p>
-                <p className="mt-4 text-sm font-semibold text-gold">{card.range}</p>
+                {service.image && (
+                  <div className="relative h-44 w-full overflow-hidden">
+                    <Image
+                      src={service.image}
+                      alt={card.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-ink/10 to-transparent" />
+                    <service.icon className="absolute bottom-3 left-4 text-white drop-shadow-md" size={30} />
+                  </div>
+                )}
+                <div className="p-6">
+                  {!service.image && <service.icon className="mb-4 text-brand" size={32} />}
+                  <h3 className="text-xl font-bold">{card.title}</h3>
+                  <p className="mt-3 text-ink/67">{card.text}</p>
+                  <p className="mt-4 text-sm font-semibold text-gold">{card.range}</p>
+                </div>
               </StaggerItem>
               );
             })}

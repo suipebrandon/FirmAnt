@@ -11,22 +11,24 @@ export const copy = {
     nav: ["Home", "About", "Services", "Portfolio", "Contact"],
 
     // ── Home — Hero ──────────────────────────────────────────────────────
-    heroTitle: "Build Your Dream Home, Church or Commercial Space with Firm Ant",
+    heroTitle: "Build Your Dream Home and Commercial Space and buy your landed properties with Firm Ant",
     heroText:
-      "Reliable construction, renovation and design from Head Office Bonduma, opposite Nabesk Junction, Buea to every region of Cameroon. Clear budgets, careful supervision and first-class finishing.",
-    quote: "Talk to an expert",
+      "Reliable construction/renovations from architectural design to realization (Interior and exterior designs) and supply of materials to every region of Cameroon. Legitimate landed properties readily available.",
+    heroOffice: "Head Office: Bonduma, opposite Nabesk Junction, Buea-Cameroon.", 
+      
+      quote: "Talk to an expert",
     whatsapp: "WhatsApp us",
-    trust: ["Buea-based team", "Serving all Cameroon", "Transparent project updates", "Quality finishing guarantee"],
-    statLabels: ["Years experience", "Projects completed", "Regions served across Cameroon", "Client satisfaction"] as [string, string, string, string],
+    trust: ["Proudly Cameroon", "Serving Nation Wide", "Transparent project updates", "Quality finishing guarantee"],
+    statLabels: ["Project Managers", "Projects completed", "Areas of Expertise", "Client satisfaction"] as [string, string, string, string],
 
     // ── Home — Services Teaser ───────────────────────────────────────────
-    servicesTeaserEyebrow: "What we build",
-    servicesTeaserTitle: "Construction and design services that fit your scope and budget",
+    servicesTeaserEyebrow: "What we Offer",
+    servicesTeaserTitle: "Real Estates, Construction and design services that fit your scope and budget",
     serviceTeaserCards: [
       {
-        title: "Church Buildings",
-        text: "Worship spaces, halls, stages, offices and finishing designed for durability, comfort and growth.",
-        range: "From site assessment to complete build"
+        title: "Landed Properties",
+        text: "Verified, dispute-free lands available in Tiko, near the area where the new airport will be constructed. Ideal for homes, rentals and long-term investment, with documents and guided site visits handled for you.",
+        range: "Tiko plots near the new airport zone"
       },
       {
         title: "Residential Homes",
@@ -168,6 +170,7 @@ export const copy = {
     heroTitle: "Construisez votre maison, église ou espace commercial avec Firm Ant",
     heroText:
       "Construction, rénovation et design fiables depuis Head Office Bonduma, opposite Nabesk Junction, Buea vers tout le Cameroun. Budgets clairs, suivi rigoureux et finitions de première qualité.",
+    heroOffice: "Siège : Bonduma, en face du carrefour Nabesk, Buea-Cameroun.",
     quote: "Parler à un expert",
     whatsapp: "WhatsApp",
     trust: ["Équipe basée à Buea", "Service partout au Cameroun", "Suivi transparent", "Garantie de finition"],
@@ -178,9 +181,9 @@ export const copy = {
     servicesTeaserTitle: "Des services de construction et de design adaptés à votre budget",
     serviceTeaserCards: [
       {
-        title: "Bâtiments religieux",
-        text: "Des lieux de culte, salles, estrades et bureaux conçus pour durer, offrir du confort et accompagner la croissance.",
-        range: "De l’étude du site à la construction complète"
+        title: "Terrains titrés",
+        text: "Des terrains vérifiés et sans litige disponibles à Tiko, près de la zone où le nouvel aéroport sera construit. Idéal pour maisons, locations et investissement durable, avec documents et visites guidées prises en charge.",
+        range: "Parcelles à Tiko près du nouvel aéroport"
       },
       {
         title: "Maisons résidentielles",

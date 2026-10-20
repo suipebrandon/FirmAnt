@@ -1,4 +1,4 @@
-import { Building2, Church, ClipboardCheck, Home, Paintbrush, Sofa } from "lucide-react";
+import { Building2, ClipboardCheck, Home, LandPlot, Paintbrush, Sofa } from "lucide-react";
 
 export const contact = {
   phoneDisplay: "+237 654 27 08 82",
@@ -12,22 +12,25 @@ export const contact = {
 /** Brief service cards — used on the Home teaser and as a quick reference */
 export const services = [
   {
-    icon: Church,
-    title: "Church Buildings",
-    text: "Worship spaces, halls, stages, offices and finishing designed for durability, comfort and growth.",
-    range: "From site assessment to complete build"
+    icon: LandPlot,
+    title: "Landed Properties",
+    text: "Verified, dispute-free lands available in Tiko, near the area where the new airport will be constructed. Ideal for homes, rentals and long-term investment, with documents and guided site visits handled for you.",
+    range: "Tiko plots near the new airport zone",
+    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80"
   },
   {
     icon: Home,
     title: "Residential Homes",
     text: "New homes, extensions and finishing with clear budgets, material guidance and dependable supervision.",
-    range: "Small homes to premium residences"
+    range: "Small homes to premium residences",
+    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80"
   },
   {
     icon: Building2,
     title: "Commercial Properties",
     text: "Shops, offices, rental units and business spaces planned for customer flow and long-term value.",
-    range: "Design-build and fit-out"
+    range: "Design-build and fit-out",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
   },
   {
     icon: Paintbrush,
@@ -52,21 +55,21 @@ export const services = [
 /** Detailed service data — used on the /services page */
 export const servicesDetail = [
   {
-    id: "church",
-    icon: Church,
-    title: "Church Buildings",
-    subtitle: "From foundation to final finish worship spaces built for generations.",
+    id: "landed-properties",
+    icon: LandPlot,
+    title: "Landed Properties",
+    subtitle: "Verified lands in Tiko, near the new airport zone — ready for your future.",
     description:
-      "From site assessment to complete build, Firm Ant delivers worship spaces designed for durability, acoustic comfort and congregational growth. We handle structure, roofing, interior finishing, stage construction and office fit-outs. Whether starting from a bare plot or completing a stalled build, our team manages every phase with clear reporting and on-budget delivery.",
+      "Firm Ant offers verified, dispute-free lands in Tiko, near the area where the new airport will be constructed. Ideal for building homes, rental units or holding as a long-term investment in a fast-growing corridor. Every plot comes with clear documents, a guided site visit and support through verification and purchase.",
     features: [
-      "Acoustic ceiling and wall design",
-      "Stage, platform and pulpit construction",
-      "Multi-use hall and office layouts",
-      "Exterior finishing and landscaping",
-      "Roofing, guttering and waterproofing"
+      "Plots near the new Tiko airport development area",
+      "Verified documents and dispute-free titles",
+      "Guided site visits and inspection support",
+      "Ideal for homes, rentals and land banking",
+      "Purchase and paperwork assistance"
     ],
     image: "/Images/Church Buildings/IMG-20260708-WA0400.webp",
-    range: "From site assessment to complete build"
+    range: "Tiko plots near the new airport zone"
   },
   {
     id: "residential",
